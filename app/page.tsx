@@ -34,7 +34,7 @@ export default function HomePage() {
             CNCF Community
           </a>
           <a
-            href="https://github.com/cncg-in"
+            href="https://github.com/heyadityak/cncg.in"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-600 hover:text-blue-600 transition-colors"

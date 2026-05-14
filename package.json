@@ -1,11 +1,17 @@
 {
   "name": "cncg.in",
   "version": "0.1.0",
+  "description": "Community-run directory of Cloud Native Community Groups (CNCG) across India",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heyadityak/cncg.in.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:cf": "npx @cloudflare/next-on-pages && printf '_worker.js\\n__next-on-pages-dist__\\n' > .vercel/output/static/.assetsignore",
+    "build:cf": "npx @cloudflare/next-on-pages && node scripts/rewrite-bracket-paths.mjs && printf '_worker.js\\n' > .vercel/output/static/.assetsignore",
     "preview": "npx wrangler dev",
     "deploy": "npm run build:cf && npx wrangler deploy",
     "start": "next start",
