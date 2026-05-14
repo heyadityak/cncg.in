@@ -1,0 +1,85 @@
+version: "3"
+
+vars:
+  PROJECT_NAME: cncg-in
+  OUTPUT_DIR: .vercel/output/static
+
+tasks:
+  default:
+    desc: "Show available tasks"
+    cmds:
+      - task --list
+
+  # ── Dev ────────────────────────────────────────────────────────────────────
+
+  dev:
+    desc: "Start local dev server (Next.js with Turbopack)"
+    cmds:
+      - npm run dev
+
+  preview:
+    desc: "Build for CF Pages and preview locally with Wrangler"
+    cmds:
+      - task: build:cf
+      - npx wrangler pages dev {{.OUTPUT_DIR}}
+
+  # ── Build ──────────────────────────────────────────────────────────────────
+
+  build:
+    desc: "Standard Next.js build (for local checks)"
+    cmds:
+      - npm run build
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+
+  build:cf:
+    desc: "Build for Cloudflare Pages using next-on-pages"
+    cmds:
+      - npx @cloudflare/next-on-pages
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+
+  # ── Deploy ─────────────────────────────────────────────────────────────────
+
+  deploy:
+    desc: "Build for CF Pages and deploy to production"
+    cmds:
+      - task: build:cf
+      - task: deploy:only
+
+  deploy:only:
+    desc: "Deploy pre-built output to CF Pages (skips build)"
+    preconditions:
+      - sh: test -d {{.OUTPUT_DIR}}
+        msg: "Output dir '{{.OUTPUT_DIR}}' not found — run 'task build:cf' first"
+    cmds:
+      - npx wrangler pages deploy {{.OUTPUT_DIR}} --project-name={{.PROJECT_NAME}} --commit-dirty=true
+
+  # ── Cloudflare helpers ─────────────────────────────────────────────────────
+
+  cf:project:create:
+    desc: "Create the Cloudflare Pages project (run once)"
+    cmds:
+      - npx wrangler pages project create {{.PROJECT_NAME}}
+
+  cf:tail:
+    desc: "Tail live Cloudflare Pages logs"
+    cmds:
+      - npx wrangler pages deployment tail --project-name={{.PROJECT_NAME}}
+
+  cf:deployments:
+    desc: "List recent deployments"
+    cmds:
+      - npx wrangler pages deployment list --project-name={{.PROJECT_NAME}}
+
+  # ── Misc ───────────────────────────────────────────────────────────────────
+
+  lint:
+    desc: "Run ESLint"
+    cmds:
+      - npm run lint
+
+  clean:
+    desc: "Remove build artifacts"
+    cmds:
+      - rm -rf .next .vercel/output

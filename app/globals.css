@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Leaflet overrides */
+.leaflet-container {
+  font-family: inherit;
+  z-index: 0;
+  background: #e8eef4 !important;
+}
+.leaflet-control-zoom a {
+  background: #1e293b !important;
+  color: #94a3b8 !important;
+  border-color: #334155 !important;
+  font-weight: 600;
+}
+.leaflet-control-zoom a:hover {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+}
+.leaflet-control-attribution { display: none !important; }
+.cncg-tooltip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 13px;
+  padding: 6px 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.cncg-tooltip::before,
+.cncg-tooltip.leaflet-tooltip-top::before {
+  border-top-color: #1e293b;
 }

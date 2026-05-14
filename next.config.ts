@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Required for @cloudflare/next-on-pages
+  experimental: {},
 };
 
 export default nextConfig;
