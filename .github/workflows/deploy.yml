@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to Cloudflare Workers
 
 on:
   push:
@@ -30,15 +30,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build for Cloudflare Pages
+      - name: Build for Cloudflare Workers
         run: npx @cloudflare/next-on-pages
         env:
           # Silence the next-on-pages telemetry prompt
           NEXT_TELEMETRY_DISABLED: 1
 
-      - name: Deploy to Cloudflare Pages
+      - name: Create .assetsignore
+        run: printf "_worker.js\n__next-on-pages-dist__\n" > .vercel/output/static/.assetsignore
+
+      - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=cncg-in --commit-dirty=true
+          command: deploy

@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { STATE_SLUGS, CITY_SLUGS } from "@/data/groups";
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") ?? "";
   const { pathname } = request.nextUrl;
 
@@ -15,8 +15,15 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // In dev, real paths are used directly: /, /state/[s], /city/[c]
-  if (process.env.NODE_ENV === "development") {
+  // In dev (localhost / *.pages.dev / workers.dev), pass through —
+  // paths are used directly: /, /state/[s], /city/[c]
+  const isLocalOrPreview =
+    hostname.includes("localhost") ||
+    hostname.includes(".pages.dev") ||
+    hostname.includes(".workers.dev") ||
+    !hostname.includes("cncg.in");
+
+  if (isLocalOrPreview) {
     return NextResponse.next();
   }
 
@@ -50,9 +57,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  const url = request.nextUrl.clone();
-  url.pathname = "/not-found";
-  return NextResponse.rewrite(url);
+  // Unknown subdomain — hard redirect to the apex domain
+  const redirectUrl = new URL("https://cncg.in/");
+  return NextResponse.redirect(redirectUrl, 301);
 }
 
 export const config = {

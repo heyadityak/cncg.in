@@ -1,4 +1,52 @@
+# Deployed as a Cloudflare Worker (NOT Pages).
+# Use: npx wrangler deploy
+# Do NOT use: npx wrangler pages deploy (that was the old Pages setup)
+#
+# DNS setup required in the Cloudflare dashboard for zone cncg.in:
+#   - Add a proxied wildcard A record: * → 192.0.2.1 (dummy IP, proxied)
+#     OR a proxied CNAME: * → cncg-in.workers.dev (proxied)
+#   The Worker routes below intercept all matching traffic before it hits DNS.
+
 name = "cncg-in"
 compatibility_date = "2025-03-01"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
+
+main = ".vercel/output/static/_worker.js/index.js"
+
+# next-on-pages emits __next-on-pages-dist__/*.js files alongside index.js
+# that are imported as ES modules at runtime. Wrangler must walk the entry
+# directory and attach them, otherwise the worker throws
+# "No such module __next-on-pages-dist__/functions/middleware.func.js".
+find_additional_modules = true
+rules = [
+  { type = "ESModule", globs = ["**/*.js"], fallthrough = true }
+]
+
+routes = [
+  { pattern = "cncg.in/*", zone_name = "cncg.in" },
+  { pattern = "*.cncg.in/*", zone_name = "cncg.in" }
+]
+
+[assets]
+directory = ".vercel/output/static"
+binding = "ASSETS"
+# Critical: run the Worker BEFORE static assets so the middleware
+# can inspect the Host header and rewrite paths for subdomain routing.
+# Without this, requests for `/` on `karnataka.cncg.in` are served
+# directly from `index.html` and the middleware never runs.
+run_worker_first = true
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1

@@ -1,0 +1,13 @@
+# www → apex redirect is handled by middleware.ts (Workers _redirects requires relative paths only)
+#
+# Legacy webpack chunk paths — a previous build emitted dynamic-route chunks
+# under bracket dirs (`[state]`, `[city]`). Browsers with stale runtimes
+# still request the URL-encoded form. Redirect those to the renamed
+# underscore dirs so old tabs don't ChunkLoadError.
+#
+# IMPORTANT: only match the URL-encoded form (`%5B…%5D`). Literal brackets
+# in `_redirects` source patterns are treated as named-wildcard placeholders
+# by Cloudflare, which would match `_state_` itself and cause an infinite
+# redirect loop.
+/_next/static/chunks/app/state/%5Bstate%5D/* /_next/static/chunks/app/state/_state_/:splat 301
+/_next/static/chunks/app/city/%5Bcity%5D/* /_next/static/chunks/app/city/_city_/:splat 301

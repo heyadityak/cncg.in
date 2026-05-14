@@ -1,0 +1,18 @@
+# Applied to all routes
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), camera=(), microphone=()
+  # Ensure the Worker (middleware) always runs for HTML pages —
+  # subdomain routing decisions depend on the hostname so CDN caching
+  # must not short-circuit the Worker.
+  Cache-Control: no-cache
+
+# Long-cache for immutable Next.js static chunks
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# GeoJSON asset — cache for a week
+/india-states-simple.geojson
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400

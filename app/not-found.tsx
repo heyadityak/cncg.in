@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Globe, MapPin } from "lucide-react";
+import SiteFooter from "@/components/site-footer";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col items-center justify-center px-4">
-      <div className="text-center max-w-md">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col">
+      <div className="flex-1 flex flex-col items-center justify-center px-4">
+        <div className="text-center max-w-md">
         <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
           <MapPin className="w-8 h-8 text-blue-500" />
         </div>
@@ -49,7 +51,9 @@ export default function NotFound() {
             Start a CNCG
           </a>
         </div>
+        </div>
       </div>
+      <SiteFooter />
     </div>
   );
 }

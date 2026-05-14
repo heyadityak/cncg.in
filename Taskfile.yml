@@ -18,10 +18,10 @@ tasks:
       - npm run dev
 
   preview:
-    desc: "Build for CF Pages and preview locally with Wrangler"
+    desc: "Build for CF Workers and preview locally with Wrangler"
     cmds:
       - task: build:cf
-      - npx wrangler pages dev {{.OUTPUT_DIR}}
+      - npx wrangler dev
 
   # ── Build ──────────────────────────────────────────────────────────────────
 
@@ -33,44 +33,63 @@ tasks:
       NEXT_TELEMETRY_DISABLED: "1"
 
   build:cf:
-    desc: "Build for Cloudflare Pages using next-on-pages"
+    desc: "Build for Cloudflare Workers using next-on-pages"
     cmds:
       - npx @cloudflare/next-on-pages
+      # Rename `[param]` dirs (e.g. `[state]`, `[city]`) to underscore-safe
+      # names and patch every reference. Cloudflare's static-asset bucket
+      # matches paths literally and chokes on the URL-encoded `%5B…%5D`
+      # form the browser sends.
+      - node scripts/rewrite-bracket-paths.mjs
+      # Prevent the worker bundle directory from being uploaded as a static asset.
+      # _worker.js holds the worker entry + its ESM submodules (loaded via
+      # find_additional_modules in wrangler.toml).
+      - printf "_worker.js\n" > {{.OUTPUT_DIR}}/.assetsignore
     env:
       NEXT_TELEMETRY_DISABLED: "1"
 
   # ── Deploy ─────────────────────────────────────────────────────────────────
 
   deploy:
-    desc: "Build for CF Pages and deploy to production"
+    desc: "Build for CF Workers and deploy to production"
     cmds:
       - task: build:cf
       - task: deploy:only
 
   deploy:only:
-    desc: "Deploy pre-built output to CF Pages (skips build)"
+    desc: "Deploy pre-built output as CF Worker (skips build)"
     preconditions:
       - sh: test -d {{.OUTPUT_DIR}}
         msg: "Output dir '{{.OUTPUT_DIR}}' not found — run 'task build:cf' first"
     cmds:
-      - npx wrangler pages deploy {{.OUTPUT_DIR}} --project-name={{.PROJECT_NAME}} --commit-dirty=true
+      - npx wrangler deploy
 
   # ── Cloudflare helpers ─────────────────────────────────────────────────────
 
-  cf:project:create:
-    desc: "Create the Cloudflare Pages project (run once)"
+  deploy:setup:
+    desc: "One-time setup: show Workers deployment next steps"
     cmds:
-      - npx wrangler pages project create {{.PROJECT_NAME}}
+      - cmd: |
+          echo ""
+          echo "Workers deployment setup:"
+          echo "  1. Ensure CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID are set as GitHub secrets"
+          echo "  2. In Cloudflare DNS for cncg.in, add a proxied wildcard record:"
+          echo "       A  *  192.0.2.1  (proxied)  ← dummy IP, Worker intercepts via route"
+          echo "     OR"
+          echo "       CNAME  *  cncg-in.workers.dev  (proxied)"
+          echo "  3. Push to main — GitHub Actions runs 'wrangler deploy' automatically"
+          echo "  4. (Optional) Delete the old cncg-in Pages project from the Cloudflare dashboard"
+        silent: true
 
   cf:tail:
-    desc: "Tail live Cloudflare Pages logs"
+    desc: "Tail live Cloudflare Worker logs"
     cmds:
-      - npx wrangler pages deployment tail --project-name={{.PROJECT_NAME}}
+      - npx wrangler tail {{.PROJECT_NAME}}
 
   cf:deployments:
-    desc: "List recent deployments"
+    desc: "List recent Worker deployments"
     cmds:
-      - npx wrangler pages deployment list --project-name={{.PROJECT_NAME}}
+      - npx wrangler deployments list
 
   # ── Misc ───────────────────────────────────────────────────────────────────
 

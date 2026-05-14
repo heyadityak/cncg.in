@@ -5,6 +5,7 @@ import { MapPin, ArrowLeft, ChevronRight, Users } from "lucide-react";
 import { getCity, groups } from "@/data/groups";
 import JoinCta from "@/components/join-cta";
 import CityMapClient from "@/components/city-map-client";
+import SiteFooter from "@/components/site-footer";
 
 interface Props {
   params: Promise<{ city: string }>;
@@ -172,27 +173,7 @@ export default async function CityPage({ params }: Props) {
         )}
       </main>
 
-      <footer className="text-center text-xs text-slate-400 py-6">
-        <Link
-          href={
-            process.env.NODE_ENV === "development"
-              ? "/"
-              : "https://cncg.in"
-          }
-          className="hover:text-blue-500 transition-colors"
-        >
-          ← Back to CNCG India
-        </Link>
-        {" "}&middot;{" "}
-        <a
-          href="https://cncf.io"
-          className="hover:text-blue-500 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CNCF
-        </a>
-      </footer>
+      <SiteFooter showBackLink />
     </div>
   );
 }

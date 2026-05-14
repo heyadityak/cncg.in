@@ -21,7 +21,7 @@ interface CityMapClientProps {
 
 export default function CityMapClient({
   cities,
-  stateSlug,
+  stateSlug: _stateSlug,
   zoom,
 }: CityMapClientProps) {
   const router = useRouter();

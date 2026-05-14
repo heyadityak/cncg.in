@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MapPin, ArrowLeft, Users, ChevronRight } from "lucide-react";
 import { getState, groups } from "@/data/groups";
 import CityMapClient from "@/components/city-map-client";
+import SiteFooter from "@/components/site-footer";
 
 interface Props {
   params: Promise<{ state: string }>;
@@ -139,6 +140,8 @@ export default async function StatePage({ params }: Props) {
           and more.
         </div>
       </main>
+
+      <SiteFooter showBackLink />
     </div>
   );
 }

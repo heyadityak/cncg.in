@@ -3,6 +3,7 @@ import { MapPin, Users, Globe } from "lucide-react";
 import { groups } from "@/data/groups";
 import IndiaMapClient from "@/components/india-map-client";
 import NearestGroup from "@/components/nearest-group";
+import SiteFooter from "@/components/site-footer";
 
 const totalGroups = groups.reduce((sum, s) => sum + s.cities.length, 0);
 const totalStates = groups.length;
@@ -134,17 +135,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <footer className="text-center text-xs text-slate-400 pb-6">
-        Built with ♥ for the Indian cloud-native community &middot;{" "}
-        <a
-          href="https://cncf.io"
-          className="hover:text-blue-500 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CNCF
-        </a>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

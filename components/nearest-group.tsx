@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Navigation, MapPin, ExternalLink, Loader2, LocateFixed } from "lucide-react";
 import { groups } from "@/data/groups";
 import type { CityGroup, StateGroup } from "@/data/groups";
@@ -67,10 +67,6 @@ export default function NearestGroup() {
       ? result ? `/city/${result.city.slug}` : "#"
       : result ? `https://${result.city.slug}.cncg.in` : "#";
 
-  const stateUrl =
-    process.env.NODE_ENV === "development"
-      ? result ? `/state/${result.state.slug}` : "#"
-      : result ? `https://${result.state.slug}.cncg.in` : "#";
 
   return (
     <div className="mx-4 mb-6 max-w-7xl lg:mx-auto">
