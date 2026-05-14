@@ -15,7 +15,8 @@
     "preview": "npx wrangler dev",
     "deploy": "npm run build:cf && npx wrangler deploy",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "smoke:verify": "node scripts/verify-smoke-lists.mjs"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",

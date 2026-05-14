@@ -61,6 +61,8 @@ const NAME_TO_SLUG: Record<string, string> = {
   "Uttar Pradesh": "uttar-pradesh",
   "NCT of Delhi": "delhi",
   "Nct Of Delhi": "delhi",
+  /** GeoJSON NAME_1; data state slug is `chandigarh-ut` (city remains `chandigarh`) */
+  Chandigarh: "chandigarh-ut",
 };
 
 function nameToSlug(name: string): string {

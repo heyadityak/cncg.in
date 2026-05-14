@@ -51,6 +51,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify smoke lists match data
+        run: npm run smoke:verify
+
       - name: Build for Cloudflare Workers
         run: npm run build:cf
         env:

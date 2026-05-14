@@ -9,7 +9,7 @@ RESOLVE=(--resolve "cncg.in:443:172.67.131.77")
 add_resolve () { RESOLVE+=(--resolve "$1:443:172.67.131.77"); }
 
 STATES=(karnataka maharashtra gujarat delhi telangana tamil-nadu west-bengal
-        kerala rajasthan uttar-pradesh odisha chandigarh uttarakhand haryana
+        kerala rajasthan uttar-pradesh odisha chandigarh-ut uttarakhand haryana
         jharkhand)
 
 CITIES=(bangalore mysore platform-engineering-bengaluru
@@ -28,6 +28,7 @@ CITIES=(bangalore mysore platform-engineering-bengaluru
 for s in "${STATES[@]}"; do add_resolve "$s.cncg.in"; done
 for c in "${CITIES[@]}"; do add_resolve "$c.cncg.in"; done
 add_resolve "www.cncg.in"
+add_resolve "xyz123abc.cncg.in"
 
 PASS=0
 FAIL=0
@@ -59,7 +60,7 @@ check "cncg.in/"            "https://cncg.in/"            "200"
 check "www.cncg.in/ (→301)" "https://www.cncg.in/"        "301"
 
 echo ""
-echo "=== State subdomains (15) ==="
+echo "=== State subdomains (${#STATES[@]}) ==="
 for s in "${STATES[@]}"; do
   check "$s.cncg.in/" "https://$s.cncg.in/" "200"
 done

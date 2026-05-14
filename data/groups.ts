@@ -490,8 +490,8 @@ export const groups: StateGroup[] = [
     ],
   },
   {
-    slug: "chandigarh",
-    name: "Chandigarh",
+    slug: "chandigarh-ut",
+    name: "Chandigarh UT",
     lat: 30.7333,
     lng: 76.7794,
     cities: [
