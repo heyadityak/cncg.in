@@ -1,17 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import type { CityGroup } from "@/data/groups";
 
-// Fix Leaflet's default icon path issue with webpack/Next.js
 const defaultIcon = L.icon({
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  iconUrl: "/leaflet/marker-icon.png",
+  iconRetinaUrl: "/leaflet/marker-icon-2x.png",
+  shadowUrl: "/leaflet/marker-shadow.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -20,14 +18,16 @@ const defaultIcon = L.icon({
 
 function FitBounds({ cities }: { cities: CityGroup[] }) {
   const map = useMap();
+  const hasFitted = useRef(false);
+
   useEffect(() => {
-    if (cities.length === 1) {
-      map.setView([cities[0].lat, cities[0].lng], 11);
-    } else if (cities.length > 1) {
-      const bounds = L.latLngBounds(cities.map((c) => [c.lat, c.lng]));
-      map.fitBounds(bounds, { padding: [40, 40] });
-    }
+    if (hasFitted.current || cities.length <= 1) return;
+    hasFitted.current = true;
+
+    const bounds = L.latLngBounds(cities.map((c) => [c.lat, c.lng]));
+    map.fitBounds(bounds, { padding: [40, 40], animate: false });
   }, [map, cities]);
+
   return null;
 }
 
@@ -44,6 +44,8 @@ export default function CityMap({
   zoom = 7,
   className = "w-full h-full",
 }: CityMapProps) {
+  const mapKey = useMemo(() => cities.map((c) => c.slug).join(","), [cities]);
+
   const center: [number, number] =
     cities.length === 1
       ? [cities[0].lat, cities[0].lng]
@@ -52,17 +54,22 @@ export default function CityMap({
           cities.reduce((s, c) => s + c.lng, 0) / cities.length,
         ];
 
+  const mapZoom = cities.length === 1 ? zoom : Math.min(zoom, 7);
+
   return (
     <MapContainer
+      key={mapKey}
       center={center}
-      zoom={zoom}
+      zoom={mapZoom}
       className={className}
       scrollWheelZoom={false}
-      style={{ borderRadius: "inherit" }}
+      style={{ borderRadius: "inherit", height: "100%", width: "100%" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        maxNativeZoom={19}
+        updateWhenIdle
       />
       <FitBounds cities={cities} />
       {cities.map((city) => (

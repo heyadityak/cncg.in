@@ -1,0 +1,943 @@
+[
+  {
+    "slug": "karnataka",
+    "name": "Karnataka",
+    "lat": 15.3173,
+    "lng": 75.7139,
+    "cities": [
+      {
+        "slug": "bangalore",
+        "name": "Bengaluru",
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "organizer": "CNCG Bengaluru Team",
+        "description": "Cloud Native Computing Group Bengaluru is one of the most active cloud-native communities in India, running regular sessions on Kubernetes, cloud-native architecture, and CNCF projects.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/52r68y4",
+        "twitterUrl": "https://twitter.com/cncgblr",
+        "latestEvent": {
+          "name": "Kubernetes Bangalore Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/52r68y4/event/3h6hugf",
+          "startsAt": "2026-02-28T03:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.436Z",
+          "endsAt": "2026-02-28T07:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Bengaluru"
+        },
+        "iconUrl": "/group-icons/bangalore.jpeg",
+        "iconSourceUrl": "https://ocgroups.dev/images/ac5bed01db4c1d165ad342ea69b24b163def376ed0b6eacc7036237417dbd137.jpeg"
+      },
+      {
+        "slug": "mysore",
+        "name": "Mysuru",
+        "lat": 12.2958,
+        "lng": 76.6394,
+        "organizer": "CNCG Mysore Team",
+        "description": "Cloud Native Computing Group Mysuru brings cloud-native technology to the Palace City, connecting developers and enthusiasts around Kubernetes, observability, and open-source tools.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/czbercj",
+        "latestEvent": {
+          "name": "Next-Gen Kubernetes: AI-Assisted Debugging and Node Readiness Innovations",
+          "eventUrl": "https://ocgroups.dev/cncf/group/czbercj/event/jmh84ga",
+          "startsAt": "2026-06-06T10:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.102Z",
+          "endsAt": "2026-06-06T12:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/mysore.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/48dc2f02040d7ddfaf6d224661c04e79d61d1344beb89f3e6582a96521a00413.jpg"
+      },
+      {
+        "slug": "platform-engineering-bengaluru",
+        "name": "Platform Engineering Bengaluru",
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "organizer": "Resiliency & Platform Engineering Bengaluru Team",
+        "description": "Platform Engineering & Resilience Engineering Meetup is a community for practitioners, builders, and curious minds working at the intersection of developer enablement, scalable infrastructure, and system reliability — covering IDPs, SRE, and intelligent automation.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/fr753cc",
+        "latestEvent": {
+          "name": "Platform Engineering AI Meetup Bengaluru June 2026",
+          "eventUrl": "https://ocgroups.dev/cncf/group/fr753cc/event/d6wvtqr",
+          "startsAt": "2026-06-02T12:15:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.099Z",
+          "endsAt": "2026-06-02T15:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Bengaluru"
+        },
+        "iconUrl": "/group-icons/platform-engineering-bengaluru.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/9d491640da78d7c6737cb40f85066d26cc7dff97d4e86f69df832fcf17d958dd.png"
+      }
+    ]
+  },
+  {
+    "slug": "maharashtra",
+    "name": "Maharashtra",
+    "lat": 19.7515,
+    "lng": 75.7139,
+    "cities": [
+      {
+        "slug": "mumbai",
+        "name": "Mumbai",
+        "lat": 19.076,
+        "lng": 72.8777,
+        "organizer": "CNCG Mumbai Team",
+        "description": "Cloud Native Computing Group Mumbai brings together developers, architects, and IT professionals to explore Kubernetes, microservices, and cloud-native patterns in the Mumbai tech ecosystem.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/k33mmvw",
+        "latestEvent": {
+          "name": "Kickstart Cloud Native Journey - First Meetup in Mumbai",
+          "eventUrl": "https://ocgroups.dev/cncf/group/k33mmvw/event/g242588",
+          "startsAt": "2026-02-07T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.365Z",
+          "endsAt": "2026-02-07T08:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Mumbai"
+        },
+        "iconUrl": "/group-icons/mumbai.jpeg",
+        "iconSourceUrl": "https://ocgroups.dev/images/49025c4a11d38968da5f5208823f68bcebd1d7133f24a472421ad2d5009d1329.jpeg"
+      },
+      {
+        "slug": "pune",
+        "name": "Pune",
+        "lat": 18.5204,
+        "lng": 73.8567,
+        "organizer": "CNCG Pune Team",
+        "description": "Cloud Native Computing Group Pune is a vibrant community of cloud-native enthusiasts, covering topics from container orchestration to service meshes and GitOps.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/p5hsakp",
+        "latestEvent": {
+          "name": "Cloud Native Day Pune 2026 (Invite Only)",
+          "eventUrl": "https://ocgroups.dev/cncf/group/p5hsakp/event/xavkwq6",
+          "startsAt": "2026-05-31T03:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.101Z",
+          "endsAt": "2026-05-31T10:00:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Pune"
+        },
+        "iconUrl": "/group-icons/pune.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/ed73a9b1ab52a91209fd29c581025ca528aea6776a6d66ec9a6af71c3d0397c4.png"
+      },
+      {
+        "slug": "thane",
+        "name": "Thane",
+        "lat": 19.2183,
+        "lng": 72.9781,
+        "organizer": "CNCG Thane Team",
+        "description": "Cloud Native Computing Group Thane serves the growing tech community of Thane, focusing on cloud-native tooling and practices for modern application development.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/8y6vc7x",
+        "latestEvent": {
+          "name": "Cloud Native Thane - April Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/8y6vc7x/event/swxazw5",
+          "startsAt": "2026-04-11T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.366Z",
+          "endsAt": "2026-04-11T08:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Mumbai"
+        },
+        "iconUrl": "/group-icons/thane.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/b85471bc62abe43dddad8f45ae228c2be42215d04ad5c52b4b6319237307eb88.jpg"
+      },
+      {
+        "slug": "nagpur",
+        "name": "Nagpur",
+        "lat": 21.1458,
+        "lng": 79.0882,
+        "organizer": "CNCG Nagpur Team",
+        "description": "Cloud Native Computing Group Nagpur connects cloud-native practitioners in Central India, promoting open-source and CNCF technologies.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/8795kew",
+        "latestEvent": {
+          "name": "Cloud Native Nagpur - Community Call: Engage, Learn, Collaborate!",
+          "eventUrl": "https://ocgroups.dev/cncf/group/8795kew/event/u29mekx",
+          "startsAt": "2025-12-06T13:30:59.000Z",
+          "syncedAt": "2026-05-27T10:05:24.383Z",
+          "endsAt": "2025-12-06T14:30:59.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/nagpur.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      },
+      {
+        "slug": "nashik",
+        "name": "Nashik",
+        "lat": 19.9975,
+        "lng": 73.7898,
+        "organizer": "CNCG Nashik Team",
+        "description": "Cloud Native Nashik is a thriving community of developers, engineers, and technology enthusiasts focused on cloud-native technologies, organizing regular meetups, workshops, and knowledge-sharing sessions.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/wsvh9fb",
+        "latestEvent": {
+          "name": "The AI Systems Stack :From Kubernetes to Autonomous intelligence",
+          "eventUrl": "https://ocgroups.dev/cncf/group/wsvh9fb/event/p6b9bz2",
+          "startsAt": "2026-04-01T08:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.413Z",
+          "endsAt": "2026-04-01T12:00:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "Dhule"
+        },
+        "iconUrl": "/group-icons/nashik.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/ce1644e4d77d34dee996b80cca41c0a34eadd2716521c68b8a202baba03c8ae5.png"
+      },
+      {
+        "slug": "aurangabad",
+        "name": "Chhatrapati Sambhajinagar",
+        "lat": 19.8762,
+        "lng": 75.3433,
+        "organizer": "CNCG Aurangabad Team",
+        "description": "Cloud Native Aurangabad connects cloud enthusiasts, experts, and businesses in Maharashtra's Marathwada region, sharing insights on the latest cloud technologies and trends.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/v8mac42",
+        "latestEvent": {
+          "name": "Cloud Native CSN - May Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/v8mac42/event/fuwgt6y",
+          "startsAt": "2026-05-24T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.176Z",
+          "endsAt": "2026-05-24T07:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "Aurangabad"
+        },
+        "iconUrl": "/group-icons/aurangabad.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/d56b652b54726e250eb9afe0e41be4025d9fc7d63ade5fbbe10f5b41e564273b.png"
+      },
+      {
+        "slug": "jalgaon",
+        "name": "Jalgaon",
+        "lat": 21.0077,
+        "lng": 75.5626,
+        "organizer": "CNCG Jalgaon Team",
+        "description": "Cloud Native Jalgaon is a community dedicated to helping people learn about cloud-native technologies, connecting local talent with the growing world of cloud-native solutions through training, resources, and events focused on DevOps, cloud computing, and open-source software.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/63wz5ng",
+        "latestEvent": {
+          "name": "🚀 Intro to CNCF",
+          "eventUrl": "https://ocgroups.dev/cncf/group/63wz5ng/event/jy993u6",
+          "startsAt": "2026-04-19T16:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.640Z",
+          "endsAt": "2026-04-19T17:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/jalgaon.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      },
+      {
+        "slug": "kubernetes-pune",
+        "name": "Kubernetes Pune",
+        "lat": 18.5204,
+        "lng": 73.8567,
+        "organizer": "Kubernetes Pune Team",
+        "description": "Kubernetes Pune is a group for all Kubernauts who want to learn and share experiences about Kubernetes. This community is for all skill levels — from beginners to experienced professionals — discussing Kubernetes, service discovery, load balancing, networking, storage, and more.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/h79jub8",
+        "latestEvent": {
+          "name": "#60: Kubernetes Pune meetup March 2026",
+          "eventUrl": "https://ocgroups.dev/cncf/group/h79jub8/event/5qk9wzx",
+          "startsAt": "2026-03-28T05:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.165Z",
+          "endsAt": "2026-03-28T07:00:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Pune"
+        },
+        "iconUrl": "/group-icons/kubernetes-pune.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/cd90c55e78ce4277831452154bf22898c9506a0d3f7763aa67f139c5dacb65de.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "gujarat",
+    "name": "Gujarat",
+    "lat": 22.2587,
+    "lng": 71.1924,
+    "cities": [
+      {
+        "slug": "ahmedabad",
+        "name": "Ahmedabad",
+        "lat": 23.0225,
+        "lng": 72.5714,
+        "organizer": "CNCG Ahmedabad Team",
+        "description": "Cloud Native Computing Group Ahmedabad is Gujarat's premier cloud-native community, hosting talks and workshops on Kubernetes, Prometheus, and the broader CNCF ecosystem.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/pfcyuzd",
+        "latestEvent": {
+          "name": "CNCG Ahmedabad May 2026 In-Person Meetup @ The Intellify®",
+          "eventUrl": "https://ocgroups.dev/cncf/group/pfcyuzd/event/7p43z39",
+          "startsAt": "2026-05-30T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.628Z",
+          "endsAt": "2026-05-30T07:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Ahmedabad"
+        },
+        "iconUrl": "/group-icons/ahmedabad.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/275447edceb57c53d8b1f5335ffb323237047fd0172115eb020ef304eb1aae46.png"
+      },
+      {
+        "slug": "gandhinagar",
+        "name": "Gandhinagar",
+        "lat": 23.2156,
+        "lng": 72.6369,
+        "organizer": "CNCG Gandhinagar Team",
+        "description": "Cloud Native Computing Group Gandhinagar serves Gujarat's capital city, bringing together Kubernetes and cloud-native enthusiasts for meetups, workshops, and deep-dives into CNCF projects.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/q26xxhw",
+        "latestEvent": {
+          "name": "Abstracting the Abyss with Sergey Pronin: Simplifying Data Workloads on Kubernetes",
+          "eventUrl": "https://ocgroups.dev/cncf/group/q26xxhw/event/dy3z243",
+          "startsAt": "2026-04-18T12:00:50.000Z",
+          "syncedAt": "2026-05-27T10:05:24.895Z",
+          "endsAt": "2026-04-18T13:00:50.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/gandhinagar.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      },
+      {
+        "slug": "rajkot",
+        "name": "Rajkot",
+        "lat": 22.3039,
+        "lng": 70.8022,
+        "organizer": "CNCG Rajkot Team",
+        "description": "Cloud Native Computing Group Rajkot serves the tech professionals of Saurashtra, exploring cloud-native tools and DevOps best practices.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/jy57rcj",
+        "latestEvent": {
+          "name": "Kubernetes Unveiled: A Beginner's Journey into Observability and AI Workloads",
+          "eventUrl": "https://ocgroups.dev/cncf/group/jy57rcj/event/bkb5rb9",
+          "startsAt": "2026-04-19T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.931Z",
+          "endsAt": "2026-04-19T07:00:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Rajkot"
+        },
+        "iconUrl": "/group-icons/rajkot.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/c3915aa64e49cbbc352d6467f81db854e71e148a2b4f590f5d6a982ec938c7ae.jpg"
+      },
+      {
+        "slug": "vadodara",
+        "name": "Vadodara",
+        "lat": 22.3072,
+        "lng": 73.1812,
+        "organizer": "CNCG Vadodara Team",
+        "description": "Cloud Native Computing Group Vadodara brings cloud-native education to Baroda, covering container technologies, cloud architectures, and open-source tools.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/q486qd9",
+        "latestEvent": {
+          "name": "Cloud Native Vadodara April Meet up",
+          "eventUrl": "https://ocgroups.dev/cncf/group/q486qd9/event/c5d7dgz",
+          "startsAt": "2026-04-26T04:15:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.947Z",
+          "endsAt": "2026-04-26T07:00:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "Vadodara"
+        },
+        "iconUrl": "/group-icons/vadodara.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/df6f4e346671d96df46af6e2adeed941adf65790f343330a9dabe0f03904a0c7.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "delhi",
+    "name": "Delhi",
+    "lat": 28.7041,
+    "lng": 77.1025,
+    "cities": [
+      {
+        "slug": "new-delhi",
+        "name": "New Delhi",
+        "lat": 28.6139,
+        "lng": 77.209,
+        "organizer": "CNCG Delhi Team",
+        "description": "Cloud Native Computing Group Delhi is a fast-growing community in the national capital region, focusing on Kubernetes, cloud-native security, and open-source contributions.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/9fryhhb",
+        "twitterUrl": "https://twitter.com/cncgdel",
+        "latestEvent": {
+          "name": "Cloud Native Inference Day: 2026 is the year of Inference",
+          "eventUrl": "https://ocgroups.dev/cncf/group/9fryhhb/event/3xrc7ya",
+          "startsAt": "2026-05-30T03:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.700Z",
+          "endsAt": "2026-05-30T11:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "NEW DELHI"
+        },
+        "iconUrl": "/group-icons/new-delhi.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/ce624fae8d9df52762c0aac3d311ad4c6d33478b80bb6a6ad4fbd75f815afb92.jpg"
+      },
+      {
+        "slug": "security-india",
+        "name": "Cloud Native Security India",
+        "lat": 28.6139,
+        "lng": 77.209,
+        "organizer": "Cloud Native Security India Team",
+        "description": "Cloud Native Security India is a pan-India community exploring the dynamic world of cloud-native security practices, dedicated to fostering professionals, enthusiasts, and experts passionate about staying at the forefront of cloud-native security trends.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/6puhmjb",
+        "latestEvent": {
+          "name": "Quantum-Safe Cloud Native: Preparing AI Infrastructure for the Post-Quantum Era",
+          "eventUrl": "https://ocgroups.dev/cncf/group/6puhmjb/event/ph3rkdw",
+          "startsAt": "2026-03-08T06:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.163Z",
+          "endsAt": "2026-03-09T10:00:00.000Z",
+          "timezone": "Asia/Dubai",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/security-india.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/a5a738b952c55e6323a30fcb85a371e8863073aada648aaf6393114a5f488095.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "telangana",
+    "name": "Telangana",
+    "lat": 17.123,
+    "lng": 79.2088,
+    "cities": [
+      {
+        "slug": "hyderabad",
+        "name": "Hyderabad",
+        "lat": 17.385,
+        "lng": 78.4867,
+        "organizer": "CNCG Hyderabad Team",
+        "description": "Cloud Native Computing Group Hyderabad is one of India's most active CNCF communities, running monthly sessions on Kubernetes, Istio, and cloud-native observability.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/wwpsss3",
+        "latestEvent": {
+          "name": "Join us for GrafanaCON Local Hyderabad!",
+          "eventUrl": "https://ocgroups.dev/cncf/group/wwpsss3/event/8r4jau3",
+          "startsAt": "2026-05-30T04:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:24.905Z",
+          "endsAt": "2026-05-30T09:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Hyderabad"
+        },
+        "iconUrl": "/group-icons/hyderabad.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/64a6197b51b65fcd3ad82b818dbfbf031aa89ceab3069e6f86236d0252217c2c.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "tamil-nadu",
+    "name": "Tamil Nadu",
+    "lat": 11.1271,
+    "lng": 78.6569,
+    "cities": [
+      {
+        "slug": "chennai",
+        "name": "Chennai",
+        "lat": 13.0827,
+        "lng": 80.2707,
+        "organizer": "CNCG Chennai Team",
+        "description": "Cloud Native Computing Group Chennai is the gateway to cloud-native technologies in South India, hosting talks on Kubernetes, cloud cost optimisation, and CNCF project deep-dives.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/96ne96f",
+        "latestEvent": {
+          "name": "Cloud Native Chennai - May 2026 Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/96ne96f/event/ccc8hgf",
+          "startsAt": "2026-05-16T04:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.238Z",
+          "endsAt": "2026-05-16T08:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Chennai"
+        },
+        "iconUrl": "/group-icons/chennai.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/a30fe89301bceaa424b5be066ec857dd28fab2d2738e3f601a63f8091c887fef.png"
+      },
+      {
+        "slug": "coimbatore",
+        "name": "Coimbatore",
+        "lat": 11.0168,
+        "lng": 76.9558,
+        "organizer": "CNCG Coimbatore Team",
+        "description": "Cloud Native Computing Group Coimbatore drives cloud-native adoption in Tamil Nadu's industrial city, with workshops and hackathons for the local developer community.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/3z5cts7",
+        "latestEvent": {
+          "name": "Cloud Native Coimbatore - April 2026 Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/3z5cts7/event/uhsr73w",
+          "startsAt": "2026-04-11T04:15:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.430Z",
+          "endsAt": "2026-04-11T07:15:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Pappanaickenpalayam"
+        },
+        "iconUrl": "/group-icons/coimbatore.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/45c85d294e6c806ce47059bdca17b6fb8d2474873ccb1432f86e7c157f69b9ae.png"
+      },
+      {
+        "slug": "trichy",
+        "name": "Tiruchirappalli",
+        "lat": 10.7905,
+        "lng": 78.7047,
+        "organizer": "CNCG Trichy Team",
+        "description": "Cloud Native Trichy is a passionate community of cloud-native enthusiasts exploring modern architecture, DevOps, CI/CD, Kubernetes, service mesh, security, and observability in the Temple City.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/gmzewhx",
+        "iconUrl": "/group-icons/trichy.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/11871ceaf2c54301fd20fca64a865970bd0b74cf5a09372681737ea91b07ab9c.jpg"
+      },
+      {
+        "slug": "madurai",
+        "name": "Madurai",
+        "lat": 9.9252,
+        "lng": 78.1198,
+        "organizer": "CNCG Madurai Team",
+        "description": "Kubernetes Madurai is a community for cloud-native and Kubernetes enthusiasts in South Tamil Nadu, hosting meetups for all skill levels from beginners to experienced professionals.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/k7zezcd",
+        "latestEvent": {
+          "name": "CNCF Madurai Meetup: Ignite Your Passion for Kubernetes & Cloud Native",
+          "eventUrl": "https://ocgroups.dev/cncf/group/k7zezcd/event/9gx6rga",
+          "startsAt": "2026-01-03T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.457Z",
+          "endsAt": "2026-01-03T07:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/madurai.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      },
+      {
+        "slug": "pollachi",
+        "name": "Pollachi",
+        "lat": 10.6594,
+        "lng": 77.0075,
+        "organizer": "CNCG Pollachi Team",
+        "description": "Cloud Native Pollachi is an official CNCF community group bringing cloud-native technologies to the Pollachi region of Tamil Nadu.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/8cs7bfd",
+        "iconUrl": "/group-icons/pollachi.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      }
+    ]
+  },
+  {
+    "slug": "west-bengal",
+    "name": "West Bengal",
+    "lat": 22.9868,
+    "lng": 87.855,
+    "cities": [
+      {
+        "slug": "kolkata",
+        "name": "Kolkata",
+        "lat": 22.5726,
+        "lng": 88.3639,
+        "organizer": "CNCG Kolkata Team",
+        "description": "Cloud Native Computing Group Kolkata is East India's premier cloud-native community, bringing together engineers and architects to explore CNCF projects and cloud-native patterns.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/9qb7ddk",
+        "latestEvent": {
+          "name": "Ship Faster with Kubernetes",
+          "eventUrl": "https://ocgroups.dev/cncf/group/9qb7ddk/event/ckderjh",
+          "startsAt": "2026-05-30T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.431Z",
+          "endsAt": "2026-05-30T08:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person"
+        },
+        "iconUrl": "/group-icons/kolkata.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/ed18e686c189773ebb5f775ab2769f9f27eb0346fc0de284ee4718747e13566b.png"
+      },
+      {
+        "slug": "durgapur",
+        "name": "Durgapur",
+        "lat": 23.5204,
+        "lng": 87.3119,
+        "organizer": "CNCG Durgapur Team",
+        "description": "Cloud Native Durgapur is a dynamic community affiliated with the CNCF, revolutionizing the cloud-native ecosystem in the Durgapur region through networking, education, and collaboration.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/eqafue9",
+        "latestEvent": {
+          "name": "Icy Init - From Zero to Production",
+          "eventUrl": "https://ocgroups.dev/cncf/group/eqafue9/event/hz88m29",
+          "startsAt": "2026-02-14T05:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.231Z",
+          "endsAt": "2026-02-14T06:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/durgapur.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/3199d1003293aa7862637f7cd27a76ce066c0d368162967f3573ab138fd4ceae.png"
+      },
+      {
+        "slug": "hooghly",
+        "name": "Hooghly",
+        "lat": 22.9,
+        "lng": 88.3967,
+        "organizer": "CNCG Hooghly Team",
+        "description": "Cloud Native Hooghly is a vibrant CNCF-affiliated community in the Hooghly region of West Bengal, empowering members through networking, education, and collaboration around containerization, microservices, and Kubernetes.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/ty9dt7j",
+        "latestEvent": {
+          "name": "Kubernetes and Friends",
+          "eventUrl": "https://ocgroups.dev/cncf/group/ty9dt7j/event/f7r463h",
+          "startsAt": "2026-02-24T05:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.696Z",
+          "endsAt": "2026-02-24T10:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "Kolkata"
+        },
+        "iconUrl": "/group-icons/hooghly.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      }
+    ]
+  },
+  {
+    "slug": "kerala",
+    "name": "Kerala",
+    "lat": 10.8505,
+    "lng": 76.2711,
+    "cities": [
+      {
+        "slug": "kochi",
+        "name": "Kochi",
+        "lat": 9.9312,
+        "lng": 76.2673,
+        "organizer": "CNCG Kochi Team",
+        "description": "Cloud Native Computing Group Kochi drives cloud-native learning in Kerala, with a strong focus on Kubernetes, serverless, and open-source contributions from the developer community.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/h47f5ed",
+        "latestEvent": {
+          "name": "CNCG Kochi February Offline Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/h47f5ed/event/j8kxcb2",
+          "startsAt": "2026-02-28T03:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.796Z",
+          "endsAt": "2026-02-28T07:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Kochi"
+        },
+        "iconUrl": "/group-icons/kochi.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/86675f053d914e3add2d354dcb656afad3741a7b84c8941fcc9dea3dbf66974e.png"
+      },
+      {
+        "slug": "trivandrum",
+        "name": "Thiruvananthapuram",
+        "lat": 8.5241,
+        "lng": 76.9366,
+        "organizer": "CNCG Trivandrum Team",
+        "description": "Cloud Native Computing Group Thiruvananthapuram connects cloud-native practitioners in Kerala's capital, focusing on DevOps, CI/CD, and Kubernetes-based application delivery.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/7b3tqkv",
+        "latestEvent": {
+          "name": "November Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/7q6u5cc",
+          "startsAt": "2025-11-22T04:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.979Z",
+          "endsAt": "2025-11-22T07:00:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Kazhakkoottam"
+        },
+        "iconUrl": "/group-icons/trivandrum.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/a0609ab00c59c4394de5502b7b504767794ac6b36cc8de6084a7cec9d8241d1b.png"
+      },
+      {
+        "slug": "kozhikode",
+        "name": "Kozhikode",
+        "lat": 11.2588,
+        "lng": 75.7804,
+        "organizer": "CNCG Calicut Team",
+        "description": "Cloud Native Calicut is a community-driven initiative for enthusiasts, developers, and professionals interested in cloud-native technologies in northern Kerala, fostering learning, collaboration, and growth.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/mz5nrf5",
+        "latestEvent": {
+          "name": "Cloud Native Calicut Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/mz5nrf5/event/vba56f7",
+          "startsAt": "2026-01-17T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.960Z",
+          "endsAt": "2026-01-17T07:00:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Pantheeramkavu"
+        },
+        "iconUrl": "/group-icons/kozhikode.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/2988d3226f56e9c5221aa65e258e283b3b26efa3416b9cd0d266caef27669587.png"
+      },
+      {
+        "slug": "kottayam",
+        "name": "Kottayam",
+        "lat": 9.5916,
+        "lng": 76.5222,
+        "organizer": "CNCG Kottayam Team",
+        "description": "Cloud Native Kottayam is a CNCF chapter in Kerala connecting cloud-native enthusiasts, with a focus on learning, networking, and democratizing cloud-native patterns for everyone.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/e7jbcmg",
+        "latestEvent": {
+          "name": "CNCG Kottayam Winter Online Meetup 2025",
+          "eventUrl": "https://ocgroups.dev/cncf/group/e7jbcmg/event/pv43qfp",
+          "startsAt": "2025-12-06T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.978Z",
+          "endsAt": "2025-12-06T05:40:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/kottayam.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      },
+      {
+        "slug": "thrissur",
+        "name": "Thrissur",
+        "lat": 10.5276,
+        "lng": 76.2144,
+        "organizer": "Kubernetes Kerala Team",
+        "description": "Kubernetes Kerala is a community group in Thrissur for Kubernetes and cloud-native enthusiasts, discussing the ecosystem and organizing the Cloud Native Summit Kerala.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/7zqh22z",
+        "latestEvent": {
+          "name": "Kubernetes Kerala - Trivandrum Meetup                                 25 March 2026 (Wednesday)",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7zqh22z/event/9c75vps",
+          "startsAt": "2026-03-25T09:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:25.980Z",
+          "endsAt": "2026-03-25T12:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "hybrid",
+          "venueCity": "Kazhakkoottam"
+        },
+        "iconUrl": "/group-icons/thrissur.jpeg",
+        "iconSourceUrl": "https://ocgroups.dev/images/1870cd49b2151eb35bda3f38decc5098f853cc381ec81e6bdb2b5966c20ad601.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "rajasthan",
+    "name": "Rajasthan",
+    "lat": 27.0238,
+    "lng": 74.2179,
+    "cities": [
+      {
+        "slug": "jaipur",
+        "name": "Jaipur",
+        "lat": 26.9124,
+        "lng": 75.7873,
+        "organizer": "CNCG Jaipur Team",
+        "description": "Cloud Native Computing Group Jaipur is Rajasthan's cloud-native hub, hosting events and learning sessions for developers in the Pink City's growing tech scene.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/7qpv9d9",
+        "latestEvent": {
+          "name": "#cTENcf Birthday Bash X Atlassian X AWS Jaipur",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7qpv9d9/event/2hz527k",
+          "startsAt": "2025-09-27T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.024Z",
+          "endsAt": "2025-09-27T07:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Jaipur"
+        },
+        "iconUrl": "/group-icons/jaipur.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/8d6b8b5f2cfb72054104d4d19708daa81e8db42c5d52ab76d6eced5f88dc4fbd.png"
+      },
+      {
+        "slug": "bikaner",
+        "name": "Bikaner",
+        "lat": 28.0229,
+        "lng": 73.3119,
+        "organizer": "CNCG Bikaner Team",
+        "description": "Cloud Native Bikaner is an official CNCF community group bringing cloud-native technologies and Kubernetes education to the Camel City of Rajasthan.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/gdmaa88",
+        "iconUrl": "/group-icons/bikaner.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      }
+    ]
+  },
+  {
+    "slug": "uttar-pradesh",
+    "name": "Uttar Pradesh",
+    "lat": 26.8467,
+    "lng": 80.9462,
+    "cities": [
+      {
+        "slug": "lucknow",
+        "name": "Lucknow",
+        "lat": 26.8467,
+        "lng": 80.9462,
+        "organizer": "CNCG Lucknow Team",
+        "description": "Cloud Native Computing Group Lucknow brings cloud-native knowledge to the heart of UP, covering Kubernetes, service mesh, and modern DevOps practices.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/abuptzq",
+        "latestEvent": {
+          "name": "Cloud Native Lucknow May Virtual Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/abuptzq/event/xcqcnaa",
+          "startsAt": "2026-05-31T05:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.056Z",
+          "endsAt": "2026-05-31T08:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/lucknow.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      },
+      {
+        "slug": "noida",
+        "name": "Noida",
+        "lat": 28.5355,
+        "lng": 77.391,
+        "organizer": "CNCG Noida Team",
+        "description": "Cloud Native Computing Group Noida serves the booming NCR tech corridor, hosting sessions on cloud-native security, Kubernetes operations, and platform engineering.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/u7abdpk",
+        "latestEvent": {
+          "name": "Mission O11y Possible : Panic at the Pod - Season 3",
+          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/mbctx95",
+          "startsAt": "2026-06-06T03:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.231Z",
+          "endsAt": "2026-06-06T12:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Noida"
+        },
+        "iconUrl": "/group-icons/noida.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/6e7b6887c9015acec51386d9322ccbc46809995553339d86da74bd90bff16b1c.png"
+      },
+      {
+        "slug": "kanpur",
+        "name": "Kanpur",
+        "lat": 26.4499,
+        "lng": 80.3319,
+        "organizer": "CNCG Kanpur Team",
+        "description": "CNCF Kanpur is a local community chapter bringing together students, developers, and professionals to learn and collaborate on Kubernetes, containers, microservices, and open-source cloud infrastructure.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/2qrf75q",
+        "latestEvent": {
+          "name": "C2AIR X CNCF Kanpur",
+          "eventUrl": "https://ocgroups.dev/cncf/group/2qrf75q/event/dxk5jew",
+          "startsAt": "2026-01-17T05:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.505Z",
+          "endsAt": "2026-01-17T08:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Kanpur"
+        },
+        "iconUrl": "/group-icons/kanpur.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/a1e23c1a9f883bd269ae3d3abbe9ce36df69abe075a3fc60f113bc24534fd1fc.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "odisha",
+    "name": "Odisha",
+    "lat": 20.9517,
+    "lng": 85.0985,
+    "cities": [
+      {
+        "slug": "bhubaneswar",
+        "name": "Bhubaneswar",
+        "lat": 20.2961,
+        "lng": 85.8245,
+        "organizer": "CNCG Bhubaneswar Team",
+        "description": "The CNCF Bhubaneswar chapter is a dynamic community dedicated to advancing cloud-native technologies in eastern India, hosting regular meetups, workshops, and conferences to foster collaboration, innovation, and knowledge sharing.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/gtk5ka5",
+        "latestEvent": {
+          "name": "Cloud Native Bhubaneswar Meetup #4: Cloud Native Career, Networking with Cilium, kro, and Istio",
+          "eventUrl": "https://ocgroups.dev/cncf/group/gtk5ka5/event/t9r6wzn",
+          "startsAt": "2026-01-25T05:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.505Z",
+          "endsAt": "2026-01-25T07:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/bhubaneswar.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/2c1113025bc7c530d15c33ad4ec702a11026c377bf898e13470a5319b8dae076.png"
+      }
+    ]
+  },
+  {
+    "slug": "chandigarh-ut",
+    "name": "Chandigarh UT",
+    "lat": 30.7333,
+    "lng": 76.7794,
+    "cities": [
+      {
+        "slug": "chandigarh",
+        "name": "Chandigarh",
+        "lat": 30.7333,
+        "lng": 76.7794,
+        "organizer": "CNCG Chandigarh Team",
+        "description": "The CNCG Chandigarh Chapter educates, inspires, and empowers members to unlock the full potential of cloud-native technologies, bridging local talent with the DevOps, open-source, and cloud-native ecosystems as an official CNCF chapter.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/utpgj29",
+        "latestEvent": {
+          "name": "CNCG Chandigarh Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/utpgj29/event/nkp9r6r",
+          "startsAt": "2026-05-02T03:00:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.506Z",
+          "endsAt": "2026-05-02T11:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Sahibzada Ajit Singh Nagar"
+        },
+        "iconUrl": "/group-icons/chandigarh.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/311807182a0b8bde0b6769710249108e9933c67cdcc9de2c69372f8c7a109753.png"
+      }
+    ]
+  },
+  {
+    "slug": "uttarakhand",
+    "name": "Uttarakhand",
+    "lat": 30.0668,
+    "lng": 79.0193,
+    "cities": [
+      {
+        "slug": "dehradun",
+        "name": "Dehradun",
+        "lat": 30.3165,
+        "lng": 78.0322,
+        "organizer": "CNCG Dehradun Team",
+        "description": "CNCF Dehradun is a cloud-native technology catalyst nestled in the beautiful hill city of Dehradun, leveraging cutting-edge technologies like Kubernetes, microservices, serverless architecture, and observability to transform software development in Uttarakhand.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/53rxx7u",
+        "latestEvent": {
+          "name": "🌥️ CNCG Dehradun – Agentic AI & Kubernetes 1.36 Workshop",
+          "eventUrl": "https://ocgroups.dev/cncf/group/53rxx7u/event/sfp3g9s",
+          "startsAt": "2026-05-30T04:50:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.315Z",
+          "endsAt": "2026-05-30T09:50:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "virtual"
+        },
+        "iconUrl": "/group-icons/dehradun.jpg",
+        "iconSourceUrl": "https://ocgroups.dev/images/6ed86992e851e6fd6c3b72322e24099bb46553ad920c50b5d2fcf53a31082c33.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "haryana",
+    "name": "Haryana",
+    "lat": 29.0588,
+    "lng": 76.0856,
+    "cities": [
+      {
+        "slug": "gurugram",
+        "name": "Gurugram",
+        "lat": 28.4595,
+        "lng": 77.0266,
+        "organizer": "CNCG Gurugram Team",
+        "description": "Cloud Native Gurugram is a CNCF chapter of experts, developers, and tech enthusiasts devoted to cloud-native technologies, providing the local tech community a forum to exchange best practices, insights, and information about cloud-native technology.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/atcn6qw",
+        "latestEvent": {
+          "name": "Agentic Mornings",
+          "eventUrl": "https://ocgroups.dev/cncf/group/atcn6qw/event/45fb67b",
+          "startsAt": "2026-05-16T04:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.615Z",
+          "endsAt": "2026-05-16T09:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "GURUGRAM"
+        },
+        "iconUrl": "/group-icons/gurugram.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/9fa7e67cc4a4b997e19a7a5e06aec20993b12d494497886f2a856e926d658186.png"
+      }
+    ]
+  },
+  {
+    "slug": "jharkhand",
+    "name": "Jharkhand",
+    "lat": 23.6102,
+    "lng": 85.2799,
+    "cities": [
+      {
+        "slug": "ranchi",
+        "name": "Ranchi",
+        "lat": 23.3441,
+        "lng": 85.3096,
+        "organizer": "CNCG Ranchi Team",
+        "description": "Cloud Native Ranchi is an official CNCF chapter dedicated to bridging the gap between local talent and cloud-native ecosystems in Jharkhand, providing support and inclusive, accessible events covering Kubernetes, containers, and modern infrastructure.",
+        "ocGroupUrl": "https://ocgroups.dev/cncf/group/kjqzaa6",
+        "latestEvent": {
+          "name": "Cloud Native Ranchi: May Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/kjqzaa6/event/9csae6r",
+          "startsAt": "2026-05-17T05:30:00.000Z",
+          "syncedAt": "2026-05-27T10:05:26.756Z",
+          "endsAt": "2026-05-17T09:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "Namkum"
+        },
+        "iconUrl": "/group-icons/ranchi.svg",
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      }
+    ]
+  }
+]

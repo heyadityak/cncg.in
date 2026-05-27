@@ -37,13 +37,13 @@ App starts at <http://localhost:3000>. In dev, the middleware passes through and
 The full guide is in [CONTRIBUTING.md](./CONTRIBUTING.md). The short version:
 
 1. Confirm the group exists on <https://ocgroups.dev>.
-2. Edit `data/groups.ts` and add the `CityGroup` entry inside the right `StateGroup.cities` array.
+2. Edit `data/groups.yaml` and add the city entry inside the right state's `cities` list.
 3. Run `npm run build` to type-check.
 4. Open a PR.
 
 ## Tech Stack
 
-- **Next.js 15** with the App Router (static export via `@cloudflare/next-on-pages`)
+- **Next.js 16** with the App Router (static export via `@cloudflare/next-on-pages`)
 - **Cloudflare Workers** + Workers Static Assets (wildcard subdomain routing via Worker routes)
 - **Pure SVG choropleth** for the India map (no external map library, Mercator projection computed at runtime)
 - **Leaflet + react-leaflet** for city/state mini-maps (OpenStreetMap tiles)

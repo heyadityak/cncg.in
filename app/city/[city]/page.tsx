@@ -4,6 +4,8 @@ import Link from "next/link";
 import { MapPin, ArrowLeft, ChevronRight, Users } from "lucide-react";
 import { getCity, groups } from "@/data/groups";
 import JoinCta from "@/components/join-cta";
+import GroupIcon from "@/components/group-icon";
+import LatestEventCard from "@/components/latest-event";
 import CityMapClient from "@/components/city-map-client";
 import SiteFooter from "@/components/site-footer";
 
@@ -71,9 +73,7 @@ export default async function CityPage({ params }: Props) {
       <main className="max-w-4xl mx-auto px-4 py-8 space-y-8">
         {/* Hero */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 flex flex-col sm:flex-row gap-5 items-start">
-          <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white text-2xl font-bold shadow-md">
-            {city.name.charAt(0)}
-          </div>
+          <GroupIcon city={city} size="md" />
           <div className="flex-1 min-w-0">
             <div className="flex items-start gap-2 flex-wrap">
               <h1 className="text-2xl font-bold text-slate-900">{city.name}</h1>
@@ -127,6 +127,16 @@ export default async function CityPage({ params }: Props) {
           </p>
         </div>
 
+        {/* Latest event */}
+        {city.latestEvent && (
+          <div>
+            <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">
+              Latest event
+            </h2>
+            <LatestEventCard event={city.latestEvent} />
+          </div>
+        )}
+
         {/* Join CTA */}
         <div>
           <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">
@@ -154,9 +164,7 @@ export default async function CityPage({ params }: Props) {
                     }
                     className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 hover:border-blue-200 hover:bg-blue-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center flex-shrink-0">
-                      {sibling.name.charAt(0)}
-                    </div>
+                    <GroupIcon city={sibling} size="sm" className="shadow-none" />
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-sm text-slate-800 group-hover:text-blue-700 truncate">
                         {sibling.name}

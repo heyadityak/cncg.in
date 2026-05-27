@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Navigation, MapPin, ExternalLink, Loader2, LocateFixed } from "lucide-react";
+import { Navigation, ExternalLink, Loader2, LocateFixed } from "lucide-react";
 import { groups } from "@/data/groups";
 import type { CityGroup, StateGroup } from "@/data/groups";
+import GroupIcon from "@/components/group-icon";
 
 // Haversine distance between two lat/lng points (returns km)
 function haversine(lat1: number, lng1: number, lat2: number, lng2: number): number {
@@ -123,9 +124,7 @@ export default function NearestGroup() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             {/* Group info */}
             <div className="flex items-start gap-3 flex-1 min-w-0">
-              <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                <MapPin className="w-4 h-4 text-blue-600" />
-              </div>
+              <GroupIcon city={result.city} size="sm" className="shadow-none" />
               <div className="min-w-0">
                 <p className="font-semibold text-slate-900 truncate">
                   Cloud Native {result.city.name}

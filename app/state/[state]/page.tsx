@@ -4,7 +4,10 @@ import Link from "next/link";
 import { MapPin, ArrowLeft, Users, ChevronRight } from "lucide-react";
 import { getState, groups } from "@/data/groups";
 import CityMapClient from "@/components/city-map-client";
+import GroupIcon from "@/components/group-icon";
+import LatestEventCard from "@/components/latest-event";
 import SiteFooter from "@/components/site-footer";
+import { isEventUpcoming } from "@/lib/event-utils";
 
 interface Props {
   params: Promise<{ state: string }>;
@@ -93,7 +96,7 @@ export default async function StatePage({ params }: Props) {
                 </h2>
               </div>
               <ol className="divide-y divide-slate-50">
-                {stateData.cities.map((city, idx) => (
+                {stateData.cities.map((city) => (
                   <li key={city.slug}>
                     <Link
                       href={
@@ -103,9 +106,7 @@ export default async function StatePage({ params }: Props) {
                       }
                       className="flex items-center gap-3 px-4 py-3.5 hover:bg-blue-50 transition-colors group"
                     >
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center">
-                        {idx + 1}
-                      </span>
+                      <GroupIcon city={city} size="sm" className="shadow-none" />
                       <div className="flex-1 min-w-0">
                         <p className="font-medium text-slate-800 group-hover:text-blue-700 text-sm truncate">
                           {city.name}
@@ -113,6 +114,17 @@ export default async function StatePage({ params }: Props) {
                         <p className="text-xs text-slate-500">
                           {city.slug}.cncg.in
                         </p>
+                        {city.latestEvent && (
+                          <div className="mt-1.5">
+                            {isEventUpcoming(city.latestEvent) ? (
+                              <LatestEventCard event={city.latestEvent} compact />
+                            ) : (
+                              <p className="text-xs text-slate-400 truncate">
+                                Last: {city.latestEvent.name}
+                              </p>
+                            )}
+                          </div>
+                        )}
                       </div>
                       <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-500 shrink-0" />
                     </Link>

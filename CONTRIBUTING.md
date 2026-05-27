@@ -68,12 +68,15 @@ cncg.in/
 │   ├── nearest-group.tsx         Geolocation-based suggestion
 │   └── site-footer.tsx           Shared footer + CNCF disclaimer
 ├── data/
-│   └── groups.ts                 Source of truth for all CNCG entries
+│   ├── groups.yaml               Source of truth for all CNCG entries
+│   ├── groups.json               Generated from groups.yaml (do not edit by hand)
+│   └── groups.ts                 Types + helpers
 ├── public/
 │   ├── india-states-simple.geojson  Map data (India + UTs)
 │   ├── _headers                  CDN response headers
 │   └── _redirects                CDN-level redirect rules
 ├── scripts/
+│   ├── build-groups.mjs          YAML → JSON for app imports
 │   ├── rewrite-bracket-paths.mjs Post-build: rename [state]/[city] dirs
 │   └── smoke-test.sh             Post-deploy URL health check
 ├── middleware.ts                 Subdomain routing (state/city rewrites)
@@ -90,7 +93,7 @@ cncg.in/
 
 | Tool | Why | Install |
 |---|---|---|
-| **Node.js 20+** | Build the Next.js app | [nodejs.org](https://nodejs.org) |
+| **Node.js 24+** | Build the Next.js app (LTS) | [nodejs.org](https://nodejs.org) |
 | **npm** | Package management (ships with Node) | — |
 | **Task** *(optional)* | Convenience commands | `brew install go-task` |
 | **wrangler** *(optional)* | Cloudflare CLI; only needed if you plan to deploy locally | `npm i -g wrangler` |
@@ -129,11 +132,13 @@ This is the most common contribution and you don't need any web-dev experience t
 
 CNCG India is a directory, not a registry. Every group we list must have a corresponding entry on <https://ocgroups.dev> (the official CNCF Open Community Groups platform). If the group you want to add is not on ocgroups.dev yet, please first apply through <https://community.cncf.io/chapters>.
 
-### Step 2 — open `data/groups.ts`
+### Step 2 — open `data/groups.yaml`
 
-The file exports a single `groups: StateGroup[]` array. Find the state your city belongs to, or add a new state entry if needed.
+The file is a YAML array of states. Find the state your city belongs to, or add a new state entry if needed.
 
-The two TypeScript types in scope:
+Each state and city entry uses these fields (types are defined in `data/groups.ts`):
+
+`latestEvent`, `iconUrl`, and `iconSourceUrl` are **auto-synced** from [ocgroups.dev](https://ocgroups.dev) every 6 hours — do not edit them by hand. Icons are mirrored to `public/group-icons/` and served locally.
 
 ```ts
 type CityGroup = {
@@ -161,35 +166,28 @@ type StateGroup = {
 
 Example: adding Indore (Madhya Pradesh) — a brand-new state:
 
-```ts
-{
-  slug: "madhya-pradesh",
-  name: "Madhya Pradesh",
-  lat: 22.9734,
-  lng: 78.6569,
-  cities: [
-    {
-      slug: "indore",
-      name: "Indore",
-      lat: 22.7196,
-      lng: 75.8577,
-      ocGroupUrl: "https://ocgroups.dev/cncf/group/abcd123",
-    },
-  ],
-},
+```yaml
+- slug: "madhya-pradesh"
+  name: "Madhya Pradesh"
+  lat: 22.9734
+  lng: 78.6569
+  cities:
+    - slug: "indore"
+      name: "Indore"
+      lat: 22.7196
+      lng: 75.8577
+      ocGroupUrl: "https://ocgroups.dev/cncf/group/abcd123"
 ```
 
 Example: adding a new city to an existing state — Surat in Gujarat:
 
-```ts
-// Inside the existing `gujarat` state entry's `cities` array:
-{
-  slug: "surat",
-  name: "Surat",
-  lat: 21.1702,
-  lng: 72.8311,
-  ocGroupUrl: "https://ocgroups.dev/cncf/group/xyz456",
-},
+```yaml
+# Inside the existing `gujarat` state's `cities` list:
+- slug: "surat"
+  name: "Surat"
+  lat: 21.1702
+  lng: 72.8311
+  ocGroupUrl: "https://ocgroups.dev/cncf/group/xyz456"
 ```
 
 ### Step 4 — confirm slug conventions
@@ -276,7 +274,7 @@ Push your branch and open a PR against `main`. The PR template will prompt you f
 - A test plan (what you verified manually).
 - Any linked issues.
 
-If your PR touches `data/groups.ts`, please include in the description:
+If your PR touches `data/groups.yaml`, please include in the description:
 
 - The `ocgroups.dev` URL for any new group.
 - Confirmation that you ran `npm run build` and `npm run lint`.
