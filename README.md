@@ -43,7 +43,7 @@ The full guide is in [CONTRIBUTING.md](./CONTRIBUTING.md). The short version:
 
 ## Tech Stack
 
-- **Next.js 16** with the App Router (static export via `@cloudflare/next-on-pages`)
+- **Next.js 16** with the App Router, built for Cloudflare Workers via `@opennextjs/cloudflare`
 - **Cloudflare Workers** + Workers Static Assets (wildcard subdomain routing via Worker routes)
 - **Pure SVG choropleth** for the India map (no external map library, Mercator projection computed at runtime)
 - **Leaflet + react-leaflet** for city/state mini-maps (OpenStreetMap tiles)

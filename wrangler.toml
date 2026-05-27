@@ -1,26 +1,18 @@
 # Deployed as a Cloudflare Worker (NOT Pages).
-# Use: npx wrangler deploy
-# Do NOT use: npx wrangler pages deploy (that was the old Pages setup)
+# Use: npm run deploy  (or: npx wrangler deploy after npm run build:cf)
+#
+# Built with @opennextjs/cloudflare — output lives in .open-next/
 #
 # DNS setup required in the Cloudflare dashboard for zone cncg.in:
 #   - Add a proxied wildcard A record: * → 192.0.2.1 (dummy IP, proxied)
 #     OR a proxied CNAME: * → cncg-in.workers.dev (proxied)
-#   The Worker routes below intercept all matching traffic before it hits DNS.
+#   Worker routes below intercept matching traffic before DNS resolution matters.
 
 name = "cncg-in"
 compatibility_date = "2025-03-01"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 
-main = ".vercel/output/static/_worker.js/index.js"
-
-# next-on-pages emits __next-on-pages-dist__/*.js files alongside index.js
-# that are imported as ES modules at runtime. Wrangler must walk the entry
-# directory and attach them, otherwise the worker throws
-# "No such module __next-on-pages-dist__/functions/middleware.func.js".
-find_additional_modules = true
-rules = [
-  { type = "ESModule", globs = ["**/*.js"], fallthrough = true }
-]
+main = ".open-next/worker.js"
 
 routes = [
   { pattern = "cncg.in/*", zone_name = "cncg.in" },
@@ -28,13 +20,15 @@ routes = [
 ]
 
 [assets]
-directory = ".vercel/output/static"
+directory = ".open-next/assets"
 binding = "ASSETS"
-# Critical: run the Worker BEFORE static assets so the middleware
-# can inspect the Host header and rewrite paths for subdomain routing.
-# Without this, requests for `/` on `karnataka.cncg.in` are served
-# directly from `index.html` and the middleware never runs.
+# Run the Worker before static assets so middleware can inspect Host and
+# rewrite subdomain requests (e.g. karnataka.cncg.in → /state/karnataka).
 run_worker_first = true
+
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "cncg-in"
 
 [observability]
 enabled = false

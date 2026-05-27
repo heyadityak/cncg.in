@@ -76,9 +76,35 @@ echo "=== Unknown subdomain (should hard-redirect) ==="
 check "xyz123abc.cncg.in/ (→301)" "https://xyz123abc.cncg.in/" "301"
 
 echo ""
-echo "=== Spot-check a JS chunk via subdomain ==="
-check "city _city_ chunk"  "https://pune.cncg.in/_next/static/chunks/app/city/_city_/page-c2eb102f9082377e.js"  "200"
-check "state _state_ chunk" "https://karnataka.cncg.in/_next/static/chunks/app/state/_state_/page-c2eb102f9082377e.js" "200"
+echo "=== Spot-check static assets via subdomain ==="
+check "city favicon"   "https://pune.cncg.in/favicon.ico"   "200"
+check "state favicon"  "https://karnataka.cncg.in/favicon.ico" "200"
+
+# Discover a JS chunk from each page HTML (hashes change every build)
+extract_chunk () {
+  local base=$1
+  curl -sk --connect-timeout 5 --max-time 15 "${RESOLVE[@]}" "$base" 2>/dev/null \
+    | grep -oE '/_next/static/[^"'"'"']+\.js' | head -1
+}
+
+city_chunk=$(extract_chunk "https://pune.cncg.in/")
+state_chunk=$(extract_chunk "https://karnataka.cncg.in/")
+
+if [[ -n "$city_chunk" ]]; then
+  check "city page JS chunk" "https://pune.cncg.in$city_chunk" "200"
+else
+  printf "  ✗ %-45s %s (expected %s)\n" "city page JS chunk" "missing" "200"
+  FAIL=$((FAIL + 1))
+  FAILED_URLS+=("https://pune.cncg.in/ -> no _next/static chunk in HTML")
+fi
+
+if [[ -n "$state_chunk" ]]; then
+  check "state page JS chunk" "https://karnataka.cncg.in$state_chunk" "200"
+else
+  printf "  ✗ %-45s %s (expected %s)\n" "state page JS chunk" "missing" "200"
+  FAIL=$((FAIL + 1))
+  FAILED_URLS+=("https://karnataka.cncg.in/ -> no _next/static chunk in HTML")
+fi
 
 echo ""
 echo "=== Summary ==="

@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
-const nextConfig: NextConfig = {
-  // Cloudflare Workers deploy uses @cloudflare/next-on-pages
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
+
+initOpenNextCloudflareForDev();

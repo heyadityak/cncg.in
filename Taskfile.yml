@@ -2,7 +2,6 @@ version: "3"
 
 vars:
   PROJECT_NAME: cncg-in
-  OUTPUT_DIR: .vercel/output/static
 
 tasks:
   default:
@@ -18,10 +17,11 @@ tasks:
       - npm run dev
 
   preview:
-    desc: "Build for CF Workers and preview locally with Wrangler"
+    desc: "Build for CF Workers and preview locally (OpenNext + Workers runtime)"
     cmds:
-      - task: build:cf
-      - npx wrangler dev
+      - npm run preview
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
 
   # ── Build ──────────────────────────────────────────────────────────────────
 
@@ -33,18 +33,9 @@ tasks:
       NEXT_TELEMETRY_DISABLED: "1"
 
   build:cf:
-    desc: "Build for Cloudflare Workers using next-on-pages"
+    desc: "Build for Cloudflare Workers using @opennextjs/cloudflare"
     cmds:
-      - npx @cloudflare/next-on-pages
-      # Rename `[param]` dirs (e.g. `[state]`, `[city]`) to underscore-safe
-      # names and patch every reference. Cloudflare's static-asset bucket
-      # matches paths literally and chokes on the URL-encoded `%5B…%5D`
-      # form the browser sends.
-      - node scripts/rewrite-bracket-paths.mjs
-      # Prevent the worker bundle directory from being uploaded as a static asset.
-      # _worker.js holds the worker entry + its ESM submodules (loaded via
-      # find_additional_modules in wrangler.toml).
-      - printf "_worker.js\n" > {{.OUTPUT_DIR}}/.assetsignore
+      - npm run build:cf
     env:
       NEXT_TELEMETRY_DISABLED: "1"
 
@@ -53,14 +44,13 @@ tasks:
   deploy:
     desc: "Build for CF Workers and deploy to production"
     cmds:
-      - task: build:cf
-      - task: deploy:only
+      - npm run deploy
 
   deploy:only:
-    desc: "Deploy pre-built output as CF Worker (skips build)"
+    desc: "Deploy pre-built OpenNext output (skips build)"
     preconditions:
-      - sh: test -d {{.OUTPUT_DIR}}
-        msg: "Output dir '{{.OUTPUT_DIR}}' not found — run 'task build:cf' first"
+      - sh: test -f .open-next/worker.js
+        msg: "OpenNext output not found — run 'task build:cf' first"
     cmds:
       - npx wrangler deploy
 
@@ -101,4 +91,4 @@ tasks:
   clean:
     desc: "Remove build artifacts"
     cmds:
-      - rm -rf .next .vercel/output
+      - rm -rf .next .open-next .vercel/output

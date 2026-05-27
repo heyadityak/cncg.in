@@ -17,15 +17,16 @@
     "sync:events": "node scripts/sync-ocg-events.mjs",
     "dev": "npm run build:groups && next dev --turbopack",
     "build": "npm run build:groups && next build",
-    "build:cf": "npm run build:groups && npx @cloudflare/next-on-pages && node scripts/rewrite-bracket-paths.mjs && printf '_worker.js\\n' > .vercel/output/static/.assetsignore",
-    "preview": "npx wrangler dev",
-    "deploy": "npm run build:cf && npx wrangler deploy",
+    "build:cf": "npm run build:groups && opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy:wrangler": "npm run build:cf && wrangler deploy",
     "start": "next start",
     "lint": "eslint",
     "smoke:verify": "node scripts/verify-smoke-lists.mjs"
   },
   "dependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
+    "@opennextjs/cloudflare": "^1.19.11",
     "@radix-ui/react-slot": "^1.2.4",
     "@react-leaflet/core": "^3.0.0",
     "class-variance-authority": "^0.7.1",
@@ -54,7 +55,6 @@
     "mapshaper": "^0.7.16",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vercel": "47.0.4",
     "wrangler": "^4.90.1"
   }
 }

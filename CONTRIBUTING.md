@@ -77,7 +77,6 @@ cncg.in/
 │   └── _redirects                CDN-level redirect rules
 ├── scripts/
 │   ├── build-groups.mjs          YAML → JSON for app imports
-│   ├── rewrite-bracket-paths.mjs Post-build: rename [state]/[city] dirs
 │   └── smoke-test.sh             Post-deploy URL health check
 ├── middleware.ts                 Subdomain routing (state/city rewrites)
 ├── wrangler.toml                 Cloudflare Worker config
@@ -93,7 +92,7 @@ cncg.in/
 
 | Tool | Why | Install |
 |---|---|---|
-| **Node.js 24+** | Build the Next.js app (LTS) | [nodejs.org](https://nodejs.org) |
+| **Node.js 24+** | Build the Next.js app (`engines.node` in `package.json`) | [nodejs.org](https://nodejs.org) |
 | **npm** | Package management (ships with Node) | — |
 | **Task** *(optional)* | Convenience commands | `brew install go-task` |
 | **wrangler** *(optional)* | Cloudflare CLI; only needed if you plan to deploy locally | `npm i -g wrangler` |
@@ -339,16 +338,13 @@ If you want to deploy manually (e.g. you're a maintainer and need to hotfix):
 ```bash
 task deploy            # one-step: build + deploy
 # or, equivalently:
-npm run build:cf       # build + run post-build path rewrites
-npx wrangler deploy
+npm run deploy
 ```
 
 The build pipeline:
 
-1. `npx @cloudflare/next-on-pages` — runs `next build` and adapts the output for Cloudflare's edge runtime.
-2. `node scripts/rewrite-bracket-paths.mjs` — renames `[state]`/`[city]` dirs to `_state_`/`_city_` and patches every reference. Cloudflare's asset bucket cannot serve files inside URL-encoded bracket directories.
-3. `.assetsignore` — keeps the Worker bundle directory out of the static-asset upload.
-4. `wrangler deploy` — uploads everything and binds the routes `cncg.in/*` and `*.cncg.in/*`.
+1. `opennextjs-cloudflare build` — runs `next build` and bundles the app into `.open-next/` (Worker + static assets).
+2. `opennextjs-cloudflare deploy` (or `wrangler deploy` after `build:cf`) — uploads the Worker and assets, binding routes `cncg.in/*` and `*.cncg.in/*`.
 
 The middleware (`middleware.ts`) handles the subdomain routing inside the Worker.
 
