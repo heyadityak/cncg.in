@@ -2,7 +2,6 @@
 # Edit this file to add or update groups.
 # latestEvent, iconUrl, and iconSourceUrl are updated by scripts/sync-ocg-events.mjs
 # iconUrl points to mirrored files under public/group-icons/
-# twitterUrl is the group's X profile when listed on ocgroups.dev
 
 - slug: "karnataka"
   name: "Karnataka"

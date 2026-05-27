@@ -51,10 +51,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/groups.yaml data/groups.json public/group-icons
-          git commit -m "$(cat <<'EOF'
-chore(data): sync OCG events and group icons
-
-Automated update from ocgroups.dev (scheduled every 6 hours).
-EOF
-)"
+          git commit \
+            -m "chore(data): sync OCG events and group icons" \
+            -m "Automated update from ocgroups.dev (scheduled every 6 hours)."
           git push
