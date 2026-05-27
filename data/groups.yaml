@@ -2,6 +2,7 @@
 # Edit this file to add or update groups.
 # latestEvent, iconUrl, and iconSourceUrl are updated by scripts/sync-ocg-events.mjs
 # iconUrl points to mirrored files under public/group-icons/
+# twitterUrl is the group's X profile when listed on ocgroups.dev
 
 - slug: "karnataka"
   name: "Karnataka"
@@ -15,7 +16,7 @@
       organizer: "CNCG Bengaluru Team"
       description: "Cloud Native Computing Group Bengaluru is one of the most active cloud-native communities in India, running regular sessions on Kubernetes, cloud-native architecture, and CNCF projects."
       ocGroupUrl: "https://ocgroups.dev/cncf/group/52r68y4"
-      twitterUrl: "https://twitter.com/cncgblr"
+      twitterUrl: "https://x.com/CloudnativeBLR"
       latestEvent:
         name: "Kubernetes Bangalore Meetup"
         eventUrl: "https://ocgroups.dev/cncf/group/52r68y4/event/3h6hugf"
@@ -44,6 +45,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/mysore.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/48dc2f02040d7ddfaf6d224661c04e79d61d1344beb89f3e6582a96521a00413.jpg"
+      twitterUrl: "https://x.com/CNCFMysore"
     - slug: "platform-engineering-bengaluru"
       name: "Platform Engineering Bengaluru"
       lat: 12.9716
@@ -85,6 +87,7 @@
         venueCity: "Mumbai"
       iconUrl: "/group-icons/mumbai.jpeg"
       iconSourceUrl: "https://ocgroups.dev/images/49025c4a11d38968da5f5208823f68bcebd1d7133f24a472421ad2d5009d1329.jpeg"
+      twitterUrl: "https://x.com/cncfmumbai"
     - slug: "pune"
       name: "Pune"
       lat: 18.5204
@@ -121,6 +124,7 @@
         venueCity: "Mumbai"
       iconUrl: "/group-icons/thane.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/b85471bc62abe43dddad8f45ae228c2be42215d04ad5c52b4b6319237307eb88.jpg"
+      twitterUrl: "https://x.com/cncfthane"
     - slug: "nagpur"
       name: "Nagpur"
       lat: 21.1458
@@ -138,6 +142,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/nagpur.svg"
       iconSourceUrl: "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      twitterUrl: "https://x.com/cncfnagpur"
     - slug: "nashik"
       name: "Nashik"
       lat: 19.9975
@@ -156,6 +161,7 @@
         venueCity: "Dhule"
       iconUrl: "/group-icons/nashik.png"
       iconSourceUrl: "https://ocgroups.dev/images/ce1644e4d77d34dee996b80cca41c0a34eadd2716521c68b8a202baba03c8ae5.png"
+      twitterUrl: "https://x.com/CNCF_Nashik"
     - slug: "aurangabad"
       name: "Chhatrapati Sambhajinagar"
       lat: 19.8762
@@ -191,6 +197,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/jalgaon.svg"
       iconSourceUrl: "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      twitterUrl: "https://x.com/cncfjalgaon"
     - slug: "kubernetes-pune"
       name: "Kubernetes Pune"
       lat: 18.5204
@@ -209,6 +216,7 @@
         venueCity: "Pune"
       iconUrl: "/group-icons/kubernetes-pune.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/cd90c55e78ce4277831452154bf22898c9506a0d3f7763aa67f139c5dacb65de.jpg"
+      twitterUrl: "https://x.com/kubernetes_pune"
 - slug: "gujarat"
   name: "Gujarat"
   lat: 22.2587
@@ -232,6 +240,7 @@
         venueCity: "Ahmedabad"
       iconUrl: "/group-icons/ahmedabad.png"
       iconSourceUrl: "https://ocgroups.dev/images/275447edceb57c53d8b1f5335ffb323237047fd0172115eb020ef304eb1aae46.png"
+      twitterUrl: "https://x.com/k8samd"
     - slug: "gandhinagar"
       name: "Gandhinagar"
       lat: 23.2156
@@ -249,6 +258,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/gandhinagar.svg"
       iconSourceUrl: "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      twitterUrl: "https://x.com/Cncf_G"
     - slug: "rajkot"
       name: "Rajkot"
       lat: 22.3039
@@ -267,6 +277,7 @@
         venueCity: "Rajkot"
       iconUrl: "/group-icons/rajkot.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/c3915aa64e49cbbc352d6467f81db854e71e148a2b4f590f5d6a982ec938c7ae.jpg"
+      twitterUrl: "https://x.com/CNCG_Rajkot"
     - slug: "vadodara"
       name: "Vadodara"
       lat: 22.3072
@@ -297,7 +308,7 @@
       organizer: "CNCG Delhi Team"
       description: "Cloud Native Computing Group Delhi is a fast-growing community in the national capital region, focusing on Kubernetes, cloud-native security, and open-source contributions."
       ocGroupUrl: "https://ocgroups.dev/cncf/group/9fryhhb"
-      twitterUrl: "https://twitter.com/cncgdel"
+      twitterUrl: "https://x.com/cncgnd"
       latestEvent:
         name: "Cloud Native Inference Day: 2026 is the year of Inference"
         eventUrl: "https://ocgroups.dev/cncf/group/9fryhhb/event/3xrc7ya"
@@ -349,6 +360,7 @@
         venueCity: "Hyderabad"
       iconUrl: "/group-icons/hyderabad.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/64a6197b51b65fcd3ad82b818dbfbf031aa89ceab3069e6f86236d0252217c2c.jpg"
+      twitterUrl: "https://x.com/cncfhyd"
 - slug: "tamil-nadu"
   name: "Tamil Nadu"
   lat: 11.1271
@@ -372,6 +384,7 @@
         venueCity: "Chennai"
       iconUrl: "/group-icons/chennai.png"
       iconSourceUrl: "https://ocgroups.dev/images/a30fe89301bceaa424b5be066ec857dd28fab2d2738e3f601a63f8091c887fef.png"
+      twitterUrl: "https://x.com/CNChennai"
     - slug: "coimbatore"
       name: "Coimbatore"
       lat: 11.0168
@@ -464,6 +477,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/durgapur.png"
       iconSourceUrl: "https://ocgroups.dev/images/3199d1003293aa7862637f7cd27a76ce066c0d368162967f3573ab138fd4ceae.png"
+      twitterUrl: "https://x.com/cndurgapur"
     - slug: "hooghly"
       name: "Hooghly"
       lat: 22.9
@@ -505,6 +519,7 @@
         venueCity: "Kochi"
       iconUrl: "/group-icons/kochi.png"
       iconSourceUrl: "https://ocgroups.dev/images/86675f053d914e3add2d354dcb656afad3741a7b84c8941fcc9dea3dbf66974e.png"
+      twitterUrl: "https://x.com/cncgkochi"
     - slug: "trivandrum"
       name: "Thiruvananthapuram"
       lat: 8.5241
@@ -523,6 +538,7 @@
         venueCity: "Kazhakkoottam"
       iconUrl: "/group-icons/trivandrum.png"
       iconSourceUrl: "https://ocgroups.dev/images/a0609ab00c59c4394de5502b7b504767794ac6b36cc8de6084a7cec9d8241d1b.png"
+      twitterUrl: "https://x.com/cncf_trivandrum"
     - slug: "kozhikode"
       name: "Kozhikode"
       lat: 11.2588
@@ -576,6 +592,7 @@
         venueCity: "Kazhakkoottam"
       iconUrl: "/group-icons/thrissur.jpeg"
       iconSourceUrl: "https://ocgroups.dev/images/1870cd49b2151eb35bda3f38decc5098f853cc381ec81e6bdb2b5966c20ad601.jpeg"
+      twitterUrl: "https://x.com/k8skerala"
 - slug: "rajasthan"
   name: "Rajasthan"
   lat: 27.0238
@@ -599,6 +616,7 @@
         venueCity: "Jaipur"
       iconUrl: "/group-icons/jaipur.png"
       iconSourceUrl: "https://ocgroups.dev/images/8d6b8b5f2cfb72054104d4d19708daa81e8db42c5d52ab76d6eced5f88dc4fbd.png"
+      twitterUrl: "https://x.com/cncfjaipur"
     - slug: "bikaner"
       name: "Bikaner"
       lat: 28.0229
@@ -630,6 +648,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/lucknow.svg"
       iconSourceUrl: "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      twitterUrl: "https://x.com/cncglucknow"
     - slug: "noida"
       name: "Noida"
       lat: 28.5355
@@ -711,6 +730,7 @@
         venueCity: "Sahibzada Ajit Singh Nagar"
       iconUrl: "/group-icons/chandigarh.png"
       iconSourceUrl: "https://ocgroups.dev/images/311807182a0b8bde0b6769710249108e9933c67cdcc9de2c69372f8c7a109753.png"
+      twitterUrl: "https://x.com/cncfchd"
 - slug: "uttarakhand"
   name: "Uttarakhand"
   lat: 30.0668
@@ -733,6 +753,7 @@
         kind: "virtual"
       iconUrl: "/group-icons/dehradun.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/6ed86992e851e6fd6c3b72322e24099bb46553ad920c50b5d2fcf53a31082c33.jpg"
+      twitterUrl: "https://x.com/cncgdehradun"
 - slug: "haryana"
   name: "Haryana"
   lat: 29.0588
@@ -756,6 +777,7 @@
         venueCity: "GURUGRAM"
       iconUrl: "/group-icons/gurugram.png"
       iconSourceUrl: "https://ocgroups.dev/images/9fa7e67cc4a4b997e19a7a5e06aec20993b12d494497886f2a856e926d658186.png"
+      twitterUrl: "https://x.com/cncf_gurgaon"
 - slug: "jharkhand"
   name: "Jharkhand"
   lat: 23.6102
@@ -779,3 +801,4 @@
         venueCity: "Namkum"
       iconUrl: "/group-icons/ranchi.svg"
       iconSourceUrl: "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+      twitterUrl: "https://x.com/cloudnativernc"
