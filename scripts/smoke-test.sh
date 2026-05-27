@@ -14,7 +14,7 @@ STATES=(karnataka maharashtra gujarat delhi telangana tamil-nadu west-bengal
 
 CITIES=(bangalore mysore platform-engineering-bengaluru
         mumbai pune thane nagpur nashik aurangabad jalgaon kubernetes-pune
-        ahmedabad gandhinagar rajkot vadodara surat
+        ahmedabad gandhinagar rajkot vadodara
         new-delhi security-india
         hyderabad
         chennai coimbatore trichy madurai pollachi

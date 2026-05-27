@@ -179,14 +179,14 @@ Example: adding Indore (Madhya Pradesh) — a brand-new state:
       ocGroupUrl: "https://ocgroups.dev/cncf/group/abcd123"
 ```
 
-Example: adding a new city to an existing state — Surat in Gujarat:
+Example: adding a new city to an existing state — Bhubaneswar in Odisha:
 
 ```yaml
-# Inside the existing `gujarat` state's `cities` list:
-- slug: "surat"
-  name: "Surat"
-  lat: 21.1702
-  lng: 72.8311
+# Inside the existing `odisha` state's `cities` list:
+- slug: "bhubaneswar"
+  name: "Bhubaneswar"
+  lat: 20.2961
+  lng: 85.8245
   ocGroupUrl: "https://ocgroups.dev/cncf/group/xyz456"
 ```
 
@@ -320,7 +320,7 @@ This project currently relies on three forms of verification — there's no Jest
 
 ### 3. The smoke test
 
-`scripts/smoke-test.sh` hits every subdomain (root + 15 states + 42 cities + a couple of static asset paths) against the live deployment and asserts the expected HTTP status code. Run it after deploying to confirm the routing tier is healthy:
+`scripts/smoke-test.sh` hits every subdomain (root + 15 states + 41 cities + a couple of static asset paths) against the live deployment and asserts the expected HTTP status code. Run it after deploying to confirm the routing tier is healthy:
 
 ```bash
 ./scripts/smoke-test.sh
