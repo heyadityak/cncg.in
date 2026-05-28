@@ -134,9 +134,9 @@
       latestEvent:
         name: "Back to Cloud Native Nagpur"
         eventUrl: "https://ocgroups.dev/cncf/group/8795kew/event/7tsb8tj"
-        startsAt: "2026-06-20T12:00:00.000Z"
-        syncedAt: "2026-05-28T03:36:44.078Z"
-        endsAt: "2026-06-20T13:00:00.000Z"
+        startsAt: "2026-06-27T12:00:00.000Z"
+        syncedAt: "2026-05-28T10:02:46.417Z"
+        endsAt: "2026-06-27T13:00:00.000Z"
         timezone: "Asia/Kolkata"
         kind: "in-person"
         venueCity: "Nagpur"
