@@ -746,8 +746,8 @@
       latestEvent:
         name: "🌥️ CNCG Dehradun – Agentic AI & Kubernetes 1.36 Workshop"
         eventUrl: "https://ocgroups.dev/cncf/group/53rxx7u/event/sfp3g9s"
-        startsAt: "2026-05-30T04:50:00.000Z"
-        syncedAt: "2026-05-27T10:05:26.315Z"
+        startsAt: "2026-05-30T04:45:00.000Z"
+        syncedAt: "2026-05-30T03:25:37.928Z"
         endsAt: "2026-05-30T09:50:00.000Z"
         timezone: "Asia/Calcutta"
         kind: "virtual"
