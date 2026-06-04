@@ -108,11 +108,11 @@
         "description": "Cloud Native Computing Group Pune is a vibrant community of cloud-native enthusiasts, covering topics from container orchestration to service meshes and GitOps.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/p5hsakp",
         "latestEvent": {
-          "name": "Cloud Native Day Pune 2026 (Invite Only)",
-          "eventUrl": "https://ocgroups.dev/cncf/group/p5hsakp/event/xavkwq6",
-          "startsAt": "2026-05-31T03:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:24.101Z",
-          "endsAt": "2026-05-31T10:00:00.000Z",
+          "name": "[24-HR Hackathon][Invite Only] Build. Run. Ship. Observe",
+          "eventUrl": "https://ocgroups.dev/cncf/group/p5hsakp/event/arrm8qb",
+          "startsAt": "2026-06-27T04:30:00.000Z",
+          "syncedAt": "2026-06-04T09:57:20.153Z",
+          "endsAt": "2026-06-28T06:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Pune"
