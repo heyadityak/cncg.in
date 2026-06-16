@@ -15,12 +15,11 @@
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/52r68y4",
         "twitterUrl": "https://x.com/CloudnativeBLR",
         "latestEvent": {
-          "name": "Kubernetes Bangalore Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/52r68y4/event/3h6hugf",
-          "startsAt": "2026-02-28T03:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:24.436Z",
-          "endsAt": "2026-02-28T07:30:00.000Z",
-          "timezone": "Asia/Kolkata",
+          "name": "Kubernetes Bangalore meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/52r68y4/event/quau4tx",
+          "startsAt": "2026-07-12T04:30:00.000Z",
+          "syncedAt": "2026-06-16T11:12:07.342Z",
+          "timezone": "Asia/Calcutta",
           "kind": "in-person",
           "venueCity": "Bengaluru"
         },
@@ -781,14 +780,13 @@
         "description": "Cloud Native Computing Group Noida serves the booming NCR tech corridor, hosting sessions on cloud-native security, Kubernetes operations, and platform engineering.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/u7abdpk",
         "latestEvent": {
-          "name": "Mission O11y Possible : Panic at the Pod - Season 3",
-          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/mbctx95",
-          "startsAt": "2026-06-06T03:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:26.231Z",
-          "endsAt": "2026-06-06T12:30:00.000Z",
+          "name": "Infra in the Wild",
+          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/exqtu83",
+          "startsAt": "2026-07-26T04:30:00.000Z",
+          "syncedAt": "2026-06-16T11:12:07.626Z",
+          "endsAt": "2026-07-26T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person",
-          "venueCity": "Noida"
+          "kind": "in-person"
         },
         "iconUrl": "/group-icons/noida.png",
         "iconSourceUrl": "https://ocgroups.dev/images/6e7b6887c9015acec51386d9322ccbc46809995553339d86da74bd90bff16b1c.png"
