@@ -1,8 +1,7 @@
 # Sync latest events from ocgroups.dev into data/groups.yaml every 6 hours.
-#
-# Requires "Read and write" permission for GITHUB_TOKEN (default for
-# workflows triggered from the same repo on push; scheduled runs need
-# Settings → Actions → General → Workflow permissions → Read and write).
+# When data changes, commits to main and triggers a Cloudflare Workers deploy.
+# (Pushes from GITHUB_TOKEN do not fire push-triggered workflows, so deploy is
+# invoked explicitly via workflow_call.)
 
 name: Sync OCG Events
 
@@ -21,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      changed: ${{ steps.changes.outputs.changed }}
+      commit_sha: ${{ steps.changes.outputs.commit_sha }}
 
     steps:
       - name: Checkout
@@ -42,8 +44,10 @@ jobs:
         run: npm run build:groups
 
       - name: Commit and push if changed
+        id: changes
         run: |
           if git diff --quiet -- data/groups.yaml data/groups.json public/group-icons; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No sync changes to commit."
             exit 0
           fi
@@ -55,3 +59,14 @@ jobs:
             -m "chore(data): sync OCG events and group icons" \
             -m "Automated update from ocgroups.dev (scheduled every 6 hours)."
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    name: Build & Deploy
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.sync.outputs.commit_sha }}
+    secrets: inherit

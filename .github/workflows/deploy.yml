@@ -1,4 +1,5 @@
-# Deploys the Cloudflare Worker (cncg-in) on every push to `main`.
+# Deploys the Cloudflare Worker (cncg-in) on every push to `main`, when
+# invoked manually, or when the sync-events workflow commits updated data.
 #
 # Required repository secrets (Settings → Secrets and variables → Actions):
 #
@@ -25,6 +26,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Git ref to deploy (defaults to the caller branch)
+        required: false
+        type: string
 
 concurrency:
   group: deploy-${{ github.ref }}
@@ -41,6 +48,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
