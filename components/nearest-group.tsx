@@ -146,6 +146,17 @@ export default function NearestGroup() {
               >
                 View group
               </a>
+              {result.city.cfpUrl && (
+                <a
+                  href={result.city.cfpUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-sm font-medium rounded-lg transition-colors"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  Submit CFP
+                </a>
+              )}
               {result.city.ocGroupUrl && (
                 <a
                   href={result.city.ocGroupUrl}

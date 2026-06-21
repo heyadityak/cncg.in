@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, Users, X } from "lucide-react";
+import { ExternalLink, Globe, Mic, Users, X } from "lucide-react";
 import type { ReactNode } from "react";
 import type { CityGroup } from "@/data/groups";
 
@@ -61,6 +61,28 @@ export default function JoinCta({ city }: JoinCtaProps) {
         </a>
       )}
 
+      {city.cfpUrl && (
+        <a
+          href={city.cfpUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-between gap-4 rounded-2xl border-2 border-emerald-600 bg-emerald-600 px-5 py-4 text-white shadow-md hover:bg-emerald-700 hover:border-emerald-700 transition-colors group"
+        >
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="flex-shrink-0 w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center">
+              <Mic className="w-5 h-5" />
+            </span>
+            <div className="min-w-0">
+              <p className="font-bold text-base leading-tight">Submit a talk</p>
+              <p className="text-xs text-emerald-100 truncate">
+                Propose a session for an upcoming meetup
+              </p>
+            </div>
+          </div>
+          <ExternalLink className="w-4 h-4 opacity-75 flex-shrink-0 group-hover:opacity-100 transition-opacity" />
+        </a>
+      )}
+
       {links.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {links.map((link) => (
@@ -82,7 +104,7 @@ export default function JoinCta({ city }: JoinCtaProps) {
         </div>
       )}
 
-      {!city.ocGroupUrl && links.length === 0 && (
+      {!city.ocGroupUrl && !city.cfpUrl && links.length === 0 && (
         <div className="rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm text-slate-500">
           Links coming soon. Check back for updates.
         </div>

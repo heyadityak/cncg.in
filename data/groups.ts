@@ -19,6 +19,8 @@ export type CityGroup = {
   organizer?: string;
   description?: string;
   ocGroupUrl?: string;
+  /** Google Form for speaker / CFP submissions (synced from ocgroups.dev by scripts/sync-ocg-cfp.mjs) */
+  cfpUrl?: string;
   /** Local path under public/, e.g. /group-icons/bangalore.jpeg */
   iconUrl?: string;
   /** Remote ocgroups.dev URL used during sync; do not edit by hand */

@@ -45,7 +45,8 @@
         },
         "iconUrl": "/group-icons/mysore.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/48dc2f02040d7ddfaf6d224661c04e79d61d1344beb89f3e6582a96521a00413.jpg",
-        "twitterUrl": "https://x.com/CNCFMysore"
+        "twitterUrl": "https://x.com/CNCFMysore",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLScPY9WjrDI1Givi0v23sckHTJHRo5dYKYU4Ni3tUaX2SgB1pw/viewform"
       },
       {
         "slug": "platform-engineering-bengaluru",
@@ -96,7 +97,8 @@
         },
         "iconUrl": "/group-icons/mumbai.jpeg",
         "iconSourceUrl": "https://ocgroups.dev/images/49025c4a11d38968da5f5208823f68bcebd1d7133f24a472421ad2d5009d1329.jpeg",
-        "twitterUrl": "https://x.com/cncfmumbai"
+        "twitterUrl": "https://x.com/cncfmumbai",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfdQBVZBxvhnGPMavzqn2IJaDYNVvqUG_HO28iK1dvSJNEAUQ/viewform"
       },
       {
         "slug": "pune",
@@ -139,7 +141,8 @@
         },
         "iconUrl": "/group-icons/thane.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/b85471bc62abe43dddad8f45ae228c2be42215d04ad5c52b4b6319237307eb88.jpg",
-        "twitterUrl": "https://x.com/cncfthane"
+        "twitterUrl": "https://x.com/cncfthane",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeZE-QmI5ePfeIukZj3DbM1TJabQkmgNEYO6bLhpugMKMTDTQ/viewform"
       },
       {
         "slug": "nagpur",
@@ -277,7 +280,8 @@
         },
         "iconUrl": "/group-icons/ahmedabad.png",
         "iconSourceUrl": "https://ocgroups.dev/images/275447edceb57c53d8b1f5335ffb323237047fd0172115eb020ef304eb1aae46.png",
-        "twitterUrl": "https://x.com/k8samd"
+        "twitterUrl": "https://x.com/k8samd",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd0BecTvgIuOuE9Ctx3UYqEbjPxNjfslmJfi_qtw2w66iLnAg/viewform"
       },
       {
         "slug": "gandhinagar",
@@ -320,7 +324,8 @@
         },
         "iconUrl": "/group-icons/rajkot.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/c3915aa64e49cbbc352d6467f81db854e71e148a2b4f590f5d6a982ec938c7ae.jpg",
-        "twitterUrl": "https://x.com/CNCG_Rajkot"
+        "twitterUrl": "https://x.com/CNCG_Rajkot",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLScpdESPL08dLO6vFI2832iI1wd_AWCWVFVIcE72jrdnn0zihA/viewform"
       },
       {
         "slug": "vadodara",
@@ -371,7 +376,8 @@
           "venueCity": "NEW DELHI"
         },
         "iconUrl": "/group-icons/new-delhi.jpg",
-        "iconSourceUrl": "https://ocgroups.dev/images/ce624fae8d9df52762c0aac3d311ad4c6d33478b80bb6a6ad4fbd75f815afb92.jpg"
+        "iconSourceUrl": "https://ocgroups.dev/images/ce624fae8d9df52762c0aac3d311ad4c6d33478b80bb6a6ad4fbd75f815afb92.jpg",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSedSzkVrdVvxBtYtMKhnKUgaxzCihXhEAk9J4jul7O3xxIkGA/viewform"
       },
       {
         "slug": "security-india",
@@ -421,7 +427,8 @@
         },
         "iconUrl": "/group-icons/hyderabad.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/64a6197b51b65fcd3ad82b818dbfbf031aa89ceab3069e6f86236d0252217c2c.jpg",
-        "twitterUrl": "https://x.com/cncfhyd"
+        "twitterUrl": "https://x.com/cncfhyd",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdFcoFoc4dDKg_0nCe5zbzm92wHGJA2pW3rIt8ZYP5yYP7FzQ/viewform"
       }
     ]
   },
@@ -503,7 +510,8 @@
           "kind": "virtual"
         },
         "iconUrl": "/group-icons/madurai.svg",
-        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeyCFgGjiN0eJZOH5IYhydeTH6Nfx0rWZ4e-rFlesujSf_aJA/viewform"
       },
       {
         "slug": "pollachi",
@@ -542,7 +550,8 @@
           "kind": "in-person"
         },
         "iconUrl": "/group-icons/kolkata.png",
-        "iconSourceUrl": "https://ocgroups.dev/images/ed18e686c189773ebb5f775ab2769f9f27eb0346fc0de284ee4718747e13566b.png"
+        "iconSourceUrl": "https://ocgroups.dev/images/ed18e686c189773ebb5f775ab2769f9f27eb0346fc0de284ee4718747e13566b.png",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd6-nsUZq3skQSFVqoRlTbAVH_5DlCf3rCLJC14bFB0Lcv3iQ/viewform"
       },
       {
         "slug": "durgapur",
@@ -657,7 +666,8 @@
           "venueCity": "Kozhikode"
         },
         "iconUrl": "/group-icons/kozhikode.png",
-        "iconSourceUrl": "https://ocgroups.dev/images/2988d3226f56e9c5221aa65e258e283b3b26efa3416b9cd0d266caef27669587.png"
+        "iconSourceUrl": "https://ocgroups.dev/images/2988d3226f56e9c5221aa65e258e283b3b26efa3416b9cd0d266caef27669587.png",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdTCPSUFyDRNvjZEEKFpkef1bUzJb0AIL1f8GJ6bwKkvfOThA/viewform"
       },
       {
         "slug": "kottayam",
@@ -769,7 +779,8 @@
         },
         "iconUrl": "/group-icons/lucknow.svg",
         "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg",
-        "twitterUrl": "https://x.com/cncglucknow"
+        "twitterUrl": "https://x.com/cncglucknow",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSedYYZL-4pq-kKIWuroFF5R4QDCBpWw_T2olvqSKH-GtUal0g/viewform"
       },
       {
         "slug": "noida",
@@ -927,7 +938,8 @@
         },
         "iconUrl": "/group-icons/gurugram.png",
         "iconSourceUrl": "https://ocgroups.dev/images/9fa7e67cc4a4b997e19a7a5e06aec20993b12d494497886f2a856e926d658186.png",
-        "twitterUrl": "https://x.com/cncf_gurgaon"
+        "twitterUrl": "https://x.com/cncf_gurgaon",
+        "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd-fjlz4pPRCQKXhJqdyz_y-11zcHTOEURXfyclYoMO9nF0eQ/viewform"
       }
     ]
   },

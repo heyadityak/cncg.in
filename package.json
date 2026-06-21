@@ -15,6 +15,7 @@
     "postinstall": "npm run build:groups",
     "build:groups": "node scripts/build-groups.mjs",
     "sync:events": "node scripts/sync-ocg-events.mjs",
+    "sync:cfp": "node scripts/sync-ocg-cfp.mjs",
     "dev": "npm run build:groups && next dev --turbopack",
     "build": "npm run build:groups && next build",
     "build:cf": "npm run build:groups && opennextjs-cloudflare build",
