@@ -1,7 +1,6 @@
 # CNCG community groups across India
 # Edit this file to add or update groups.
 # latestEvent, iconUrl, and iconSourceUrl are updated by scripts/sync-ocg-events.mjs
-# cfpUrl is updated by scripts/sync-ocg-cfp.mjs from ocgroups.dev group descriptions
 # iconUrl points to mirrored files under public/group-icons/
 
 - slug: "karnataka"
