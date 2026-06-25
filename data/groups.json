@@ -239,14 +239,13 @@
         "description": "Kubernetes Pune is a group for all Kubernauts who want to learn and share experiences about Kubernetes. This community is for all skill levels — from beginners to experienced professionals — discussing Kubernetes, service discovery, load balancing, networking, storage, and more.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/h79jub8",
         "latestEvent": {
-          "name": "#60: Kubernetes Pune meetup March 2026",
-          "eventUrl": "https://ocgroups.dev/cncf/group/h79jub8/event/5qk9wzx",
-          "startsAt": "2026-03-28T05:00:00.000Z",
-          "syncedAt": "2026-05-27T10:05:25.165Z",
-          "endsAt": "2026-03-28T07:00:00.000Z",
+          "name": "#61: Kubernetes Pune: Post-KubeCon India Hangout",
+          "eventUrl": "https://ocgroups.dev/cncf/group/h79jub8/event/6vra95s",
+          "startsAt": "2026-06-27T05:00:00.000Z",
+          "syncedAt": "2026-06-25T14:34:24.205Z",
+          "endsAt": "2026-06-27T06:00:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person",
-          "venueCity": "Pune"
+          "kind": "virtual"
         },
         "iconUrl": "/group-icons/kubernetes-pune.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/cd90c55e78ce4277831452154bf22898c9506a0d3f7763aa67f139c5dacb65de.jpg",
@@ -634,14 +633,14 @@
         "description": "Cloud Native Computing Group Thiruvananthapuram connects cloud-native practitioners in Kerala's capital, focusing on DevOps, CI/CD, and Kubernetes-based application delivery.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/7b3tqkv",
         "latestEvent": {
-          "name": "November Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/7q6u5cc",
-          "startsAt": "2025-11-22T04:00:00.000Z",
-          "syncedAt": "2026-05-27T10:05:25.979Z",
-          "endsAt": "2025-11-22T07:00:00.000Z",
+          "name": "CNCG Trivandrum Monthly Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/tk3zb8b",
+          "startsAt": "2026-07-22T09:30:00.000Z",
+          "syncedAt": "2026-06-25T14:34:24.553Z",
+          "endsAt": "2026-07-22T11:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
-          "venueCity": "Kazhakkoottam"
+          "venueCity": "Thiruvananthapuram"
         },
         "iconUrl": "/group-icons/trivandrum.png",
         "iconSourceUrl": "https://ocgroups.dev/images/a0609ab00c59c4394de5502b7b504767794ac6b36cc8de6084a7cec9d8241d1b.png",
@@ -793,11 +792,12 @@
         "latestEvent": {
           "name": "Infra in the Wild",
           "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/exqtu83",
-          "startsAt": "2026-07-26T04:30:00.000Z",
-          "syncedAt": "2026-06-16T11:12:07.626Z",
-          "endsAt": "2026-07-26T08:30:00.000Z",
+          "startsAt": "2026-07-25T04:30:00.000Z",
+          "syncedAt": "2026-06-25T14:34:24.638Z",
+          "endsAt": "2026-07-25T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person"
+          "kind": "in-person",
+          "venueCity": "Noida"
         },
         "iconUrl": "/group-icons/noida.png",
         "iconSourceUrl": "https://ocgroups.dev/images/6e7b6887c9015acec51386d9322ccbc46809995553339d86da74bd90bff16b1c.png"
