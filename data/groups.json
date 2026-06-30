@@ -469,14 +469,14 @@
         "description": "Cloud Native Computing Group Coimbatore drives cloud-native adoption in Tamil Nadu's industrial city, with workshops and hackathons for the local developer community.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/3z5cts7",
         "latestEvent": {
-          "name": "Cloud Native Coimbatore - April 2026 Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/3z5cts7/event/uhsr73w",
-          "startsAt": "2026-04-11T04:15:00.000Z",
-          "syncedAt": "2026-05-27T10:05:25.430Z",
-          "endsAt": "2026-04-11T07:15:00.000Z",
+          "name": "Cloud Native Coimbatore - July 2026 Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/3z5cts7/event/bz93hcq",
+          "startsAt": "2026-07-18T04:00:00.000Z",
+          "syncedAt": "2026-06-30T09:36:39.924Z",
+          "endsAt": "2026-07-18T07:00:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
-          "venueCity": "Pappanaickenpalayam"
+          "venueCity": "Coimbatore"
         },
         "iconUrl": "/group-icons/coimbatore.png",
         "iconSourceUrl": "https://ocgroups.dev/images/45c85d294e6c806ce47059bdca17b6fb8d2474873ccb1432f86e7c157f69b9ae.png"
