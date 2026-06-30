@@ -313,11 +313,11 @@
         "description": "Cloud Native Computing Group Rajkot serves the tech professionals of Saurashtra, exploring cloud-native tools and DevOps best practices.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/jy57rcj",
         "latestEvent": {
-          "name": "Kubernetes Unveiled: A Beginner's Journey into Observability and AI Workloads",
-          "eventUrl": "https://ocgroups.dev/cncf/group/jy57rcj/event/bkb5rb9",
-          "startsAt": "2026-04-19T04:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:24.931Z",
-          "endsAt": "2026-04-19T07:00:00.000Z",
+          "name": "CNCF Rajkot meeup - 12th july",
+          "eventUrl": "https://ocgroups.dev/cncf/group/jy57rcj/event/f324e8c",
+          "startsAt": "2026-07-12T04:30:00.000Z",
+          "syncedAt": "2026-06-30T03:39:01.489Z",
+          "endsAt": "2026-07-12T07:00:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Rajkot"
