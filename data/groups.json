@@ -541,12 +541,12 @@
         "description": "Cloud Native Computing Group Kolkata is East India's premier cloud-native community, bringing together engineers and architects to explore CNCF projects and cloud-native patterns.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/9qb7ddk",
         "latestEvent": {
-          "name": "Ship Faster with Kubernetes",
-          "eventUrl": "https://ocgroups.dev/cncf/group/9qb7ddk/event/ckderjh",
-          "startsAt": "2026-07-04T04:30:00.000Z",
-          "syncedAt": "2026-06-24T19:46:44.890Z",
-          "endsAt": "2026-07-04T08:30:00.000Z",
-          "timezone": "Asia/Calcutta",
+          "name": "KubeKotha",
+          "eventUrl": "https://ocgroups.dev/cncf/group/9qb7ddk/event/e5623dz",
+          "startsAt": "2026-08-22T06:00:00.000Z",
+          "syncedAt": "2026-07-04T08:37:49.653Z",
+          "endsAt": "2026-08-22T10:00:00.000Z",
+          "timezone": "Asia/Kolkata",
           "kind": "in-person"
         },
         "iconUrl": "/group-icons/kolkata.png",
