@@ -728,10 +728,10 @@
       description: "The CNCG Chandigarh Chapter educates, inspires, and empowers members to unlock the full potential of cloud-native technologies, bridging local talent with the DevOps, open-source, and cloud-native ecosystems as an official CNCF chapter."
       ocGroupUrl: "https://ocgroups.dev/cncf/group/utpgj29"
       latestEvent:
-        name: "CNCG Chandigarh Meetup"
+        name: "CNCG and AAIF Chandigarh Meetup"
         eventUrl: "https://ocgroups.dev/cncf/group/utpgj29/event/z5gz7wh"
         startsAt: "2026-07-18T04:30:00.000Z"
-        syncedAt: "2026-06-28T13:46:47.466Z"
+        syncedAt: "2026-07-09T02:58:40.723Z"
         endsAt: "2026-07-18T08:30:00.000Z"
         timezone: "Asia/Kolkata"
         kind: "in-person"
