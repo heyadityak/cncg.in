@@ -313,9 +313,9 @@
         "latestEvent": {
           "name": "CNCF Rajkot meeup - 12th july",
           "eventUrl": "https://ocgroups.dev/cncf/group/jy57rcj/event/f324e8c",
-          "startsAt": "2026-07-12T04:30:00.000Z",
-          "syncedAt": "2026-06-30T03:39:01.489Z",
-          "endsAt": "2026-07-12T07:00:00.000Z",
+          "startsAt": "2026-07-12T04:00:00.000Z",
+          "syncedAt": "2026-07-10T14:27:14.442Z",
+          "endsAt": "2026-07-12T06:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Rajkot"
