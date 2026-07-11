@@ -766,13 +766,14 @@
         "description": "Cloud Native Computing Group Lucknow brings cloud-native knowledge to the heart of UP, covering Kubernetes, service mesh, and modern DevOps practices.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/abuptzq",
         "latestEvent": {
-          "name": "Cloud Native Lucknow May Virtual Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/abuptzq/event/xcqcnaa",
-          "startsAt": "2026-05-31T05:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:26.056Z",
-          "endsAt": "2026-05-31T08:30:00.000Z",
+          "name": "Cloud Native Lucknow - July Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/abuptzq/event/84daxuc",
+          "startsAt": "2026-07-25T04:30:00.000Z",
+          "syncedAt": "2026-07-11T19:04:08.436Z",
+          "endsAt": "2026-07-25T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "virtual"
+          "kind": "in-person",
+          "venueCity": "Lucknow."
         },
         "iconUrl": "/group-icons/lucknow.svg",
         "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg",
