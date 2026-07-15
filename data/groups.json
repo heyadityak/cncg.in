@@ -674,11 +674,11 @@
         "description": "Cloud Native Kottayam is a CNCF chapter in Kerala connecting cloud-native enthusiasts, with a focus on learning, networking, and democratizing cloud-native patterns for everyone.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/e7jbcmg",
         "latestEvent": {
-          "name": "CNCG Kottayam Winter Online Meetup 2025",
-          "eventUrl": "https://ocgroups.dev/cncf/group/e7jbcmg/event/pv43qfp",
-          "startsAt": "2025-12-06T04:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:25.978Z",
-          "endsAt": "2025-12-06T05:40:00.000Z",
+          "name": "CNCG Kottayam Monsoon Online Meetup 2026",
+          "eventUrl": "https://ocgroups.dev/cncf/group/e7jbcmg/event/yck97f8",
+          "startsAt": "2026-07-18T04:30:00.000Z",
+          "syncedAt": "2026-07-15T19:11:01.976Z",
+          "endsAt": "2026-07-18T05:40:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "virtual"
         },
