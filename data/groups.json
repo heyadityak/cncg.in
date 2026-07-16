@@ -868,11 +868,12 @@
         "latestEvent": {
           "name": "CNCG and AAIF Chandigarh Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/utpgj29/event/z5gz7wh",
-          "startsAt": "2026-07-18T04:30:00.000Z",
-          "syncedAt": "2026-07-09T02:58:40.723Z",
-          "endsAt": "2026-07-18T08:30:00.000Z",
+          "startsAt": "2026-07-18T04:00:00.000Z",
+          "syncedAt": "2026-07-16T08:13:27.042Z",
+          "endsAt": "2026-07-18T09:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person"
+          "kind": "in-person",
+          "venueCity": "Punjab"
         },
         "iconUrl": "/group-icons/chandigarh.png",
         "iconSourceUrl": "https://ocgroups.dev/images/311807182a0b8bde0b6769710249108e9933c67cdcc9de2c69372f8c7a109753.png",
