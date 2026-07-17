@@ -58,6 +58,10 @@ check () {
 echo "=== Root & canonical ==="
 check "cncg.in/"            "https://cncg.in/"            "200"
 check "www.cncg.in/ (→301)" "https://www.cncg.in/"        "301"
+check "path→city subdomain" "https://cncg.in/city/ahmedabad" "301"
+check "path→state subdomain" "https://cncg.in/state/gujarat" "301"
+check "robots.txt"          "https://cncg.in/robots.txt"  "200"
+check "sitemap.xml"         "https://cncg.in/sitemap.xml" "200"
 
 echo ""
 echo "=== State subdomains (${#STATES[@]}) ==="

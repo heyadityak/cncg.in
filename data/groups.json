@@ -263,7 +263,7 @@
         "lat": 23.0225,
         "lng": 72.5714,
         "organizer": "CNCG Ahmedabad Team",
-        "description": "Cloud Native Computing Group Ahmedabad is Gujarat's premier cloud-native community, hosting talks and workshops on Kubernetes, Prometheus, and the broader CNCF ecosystem.",
+        "description": "CNCF Ahmedabad (Cloud Native Ahmedabad / CNCG Ahmedabad) is Gujarat's premier Cloud Native Community Group, hosting talks and workshops on Kubernetes, Prometheus, and the broader CNCF ecosystem for developers in Ahmedabad.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/pfcyuzd",
         "latestEvent": {
           "name": "CNCG Ahmedabad x Docker Ahmedabad July 2026 In-Person Meetup",
@@ -286,7 +286,7 @@
         "lat": 23.2156,
         "lng": 72.6369,
         "organizer": "CNCG Gandhinagar Team",
-        "description": "Cloud Native Computing Group Gandhinagar serves Gujarat's capital city, bringing together Kubernetes and cloud-native enthusiasts for meetups, workshops, and deep-dives into CNCF projects.",
+        "description": "CNCF Gandhinagar (Cloud Native Gandhinagar / CNCG Gandhinagar) serves Gujarat's capital city, bringing together Kubernetes and cloud-native enthusiasts for meetups, workshops, and deep-dives into CNCF projects.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/q26xxhw",
         "latestEvent": {
           "name": "🚀 KubeCon India X OpenSearchCon India Highlights",
@@ -308,7 +308,7 @@
         "lat": 22.3039,
         "lng": 70.8022,
         "organizer": "CNCG Rajkot Team",
-        "description": "Cloud Native Computing Group Rajkot serves the tech professionals of Saurashtra, exploring cloud-native tools and DevOps best practices.",
+        "description": "CNCF Rajkot (Cloud Native Rajkot / CNCG Rajkot) serves tech professionals across Saurashtra with Cloud Native meetups exploring Kubernetes, CNCF projects, cloud-native tools, and DevOps best practices.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/jy57rcj",
         "latestEvent": {
           "name": "CNCF Rajkot meeup - 12th july",
@@ -331,7 +331,7 @@
         "lat": 22.3072,
         "lng": 73.1812,
         "organizer": "CNCG Vadodara Team",
-        "description": "Cloud Native Computing Group Vadodara brings cloud-native education to Baroda, covering container technologies, cloud architectures, and open-source tools.",
+        "description": "CNCF Vadodara (Cloud Native Vadodara / CNCG Vadodara) brings cloud-native education to Baroda, covering Kubernetes, container technologies, CNCF projects, and open-source tools.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/q486qd9",
         "latestEvent": {
           "name": "Cloud Native Vadodara April Meet up",

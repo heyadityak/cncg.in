@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import JsonLd from "@/components/json-ld";
+import { organizationJsonLd, SITE_URL, websiteJsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,25 +15,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CNCG India — Cloud Native Community Groups",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "CNCG India — Cloud Native Community Groups & CNCF Chapters",
+    template: "%s | CNCG India",
+  },
   description:
-    "Discover Cloud Native Community Groups across India. Find Kubernetes, cloud-native, and CNCF community groups near you.",
+    "Find every listed CNCF and Cloud Native Community Group (CNCG) across India. Discover local Kubernetes meetups, cloud-native events, and community chapters.",
   keywords: [
+    "CNCF",
     "CNCG",
     "Cloud Native",
+    "Cloud Native Community Groups",
     "Kubernetes",
-    "CNCF",
-    "India",
+    "CNCF India",
+    "Cloud Native India",
     "community",
   ],
   openGraph: {
-    title: "CNCG India — Cloud Native Community Groups",
+    title: "CNCG India — Cloud Native Community Groups & CNCF Chapters",
     description:
-      "Discover Cloud Native Community Groups across India. Find the nearest CNCG event in your city.",
-    url: "https://cncg.in",
+      "Find CNCF and Cloud Native Community Groups across India. Meetups, events, and local chapters near you.",
+    url: SITE_URL,
     siteName: "CNCG India",
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CNCG India — Cloud Native Community Groups & CNCF Chapters",
+    description:
+      "Find CNCF and Cloud Native Community Groups across India. Meetups, events, and local chapters near you.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -45,6 +67,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background`}
       >
+        <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
         {children}
       </body>
     </html>

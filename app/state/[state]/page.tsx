@@ -7,7 +7,16 @@ import CityMapClient from "@/components/city-map-client";
 import GroupIcon from "@/components/group-icon";
 import LatestEventCard from "@/components/latest-event";
 import SiteFooter from "@/components/site-footer";
+import JsonLd from "@/components/json-ld";
 import { isEventUpcoming } from "@/lib/event-utils";
+import {
+  cityCanonical,
+  stateCanonical,
+  stateDescription,
+  stateJsonLd,
+  stateKeywords,
+  stateTitle,
+} from "@/lib/seo";
 
 interface Props {
   params: Promise<{ state: string }>;
@@ -21,9 +30,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state: stateSlug } = await params;
   const stateData = getState(stateSlug);
   if (!stateData) return {};
+
+  const title = stateTitle(stateData.name);
+  const description = stateDescription(stateData);
+  const canonical = stateCanonical(stateData.slug);
+
   return {
-    title: `${stateData.name} — CNCG India`,
-    description: `Cloud Native Community Groups in ${stateData.name}. Find CNCG events in ${stateData.cities.map((c) => c.name).join(", ")}.`,
+    title: { absolute: title },
+    description,
+    keywords: stateKeywords(stateData),
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "CNCG India",
+      locale: "en_IN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -35,13 +65,13 @@ export default async function StatePage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <JsonLd data={stateJsonLd(stateData)} />
+
       {/* Header */}
       <header className="px-6 py-4 flex items-center gap-3 border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <Link
           href={
-            process.env.NODE_ENV === "development"
-              ? "/"
-              : "https://cncg.in"
+            process.env.NODE_ENV === "development" ? "/" : "https://cncg.in"
           }
           className="flex items-center gap-1.5 text-sm text-slate-600 hover:text-blue-600 transition-colors"
         >
@@ -49,17 +79,20 @@ export default async function StatePage({ params }: Props) {
           India
         </Link>
         <ChevronRight className="w-3 h-3 text-slate-400" />
-        <span className="font-semibold text-slate-900">{stateData.name}</span>
+        <span className="font-semibold text-slate-900">
+          CNCF {stateData.name}
+        </span>
       </header>
 
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* State hero */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 mb-1">
-            {stateData.name}
+            CNCF {stateData.name}
           </h1>
           <p className="text-slate-600">
-            Cloud Native Community Groups in {stateData.name}
+            Cloud Native Community Groups (CNCG) in {stateData.name} — local
+            CNCF chapters for Kubernetes meetups and cloud-native learning.
           </p>
           <div className="flex items-center gap-4 mt-3">
             <div className="flex items-center gap-1.5 text-sm text-slate-600">
@@ -71,7 +104,11 @@ export default async function StatePage({ params }: Props) {
             </div>
             <div className="flex items-center gap-1.5 text-sm text-slate-600">
               <MapPin className="w-4 h-4 text-blue-500" />
-              <span>{stateData.cities.map((c) => c.name).join(", ")}</span>
+              <span>
+                {stateData.cities
+                  .map((c) => `CNCF ${c.name}`)
+                  .join(", ")}
+              </span>
             </div>
           </div>
         </div>
@@ -92,7 +129,7 @@ export default async function StatePage({ params }: Props) {
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden h-full">
               <div className="px-4 py-3 border-b border-slate-100 bg-slate-50">
                 <h2 className="font-semibold text-slate-800 text-sm">
-                  Groups in {stateData.name}
+                  Cloud Native groups in {stateData.name}
                 </h2>
               </div>
               <ol className="divide-y divide-slate-50">
@@ -102,22 +139,29 @@ export default async function StatePage({ params }: Props) {
                       href={
                         process.env.NODE_ENV === "development"
                           ? `/city/${city.slug}`
-                          : `https://${city.slug}.cncg.in`
+                          : cityCanonical(city.slug)
                       }
                       className="flex items-center gap-3 px-4 py-3.5 hover:bg-blue-50 transition-colors group"
                     >
-                      <GroupIcon city={city} size="sm" className="shadow-none" />
+                      <GroupIcon
+                        city={city}
+                        size="sm"
+                        className="shadow-none"
+                      />
                       <div className="flex-1 min-w-0">
                         <p className="font-medium text-slate-800 group-hover:text-blue-700 text-sm truncate">
-                          {city.name}
+                          CNCF {city.name}
                         </p>
                         <p className="text-xs text-slate-500">
-                          {city.slug}.cncg.in
+                          Cloud Native {city.name} · {city.slug}.cncg.in
                         </p>
                         {city.latestEvent && (
                           <div className="mt-1.5">
                             {isEventUpcoming(city.latestEvent) ? (
-                              <LatestEventCard event={city.latestEvent} compact />
+                              <LatestEventCard
+                                event={city.latestEvent}
+                                compact
+                              />
                             ) : (
                               <p className="text-xs text-slate-400 truncate">
                                 Last: {city.latestEvent.name}
@@ -142,7 +186,7 @@ export default async function StatePage({ params }: Props) {
             <span key={c.slug}>
               {i > 0 && ", "}
               <a
-                href={`https://${c.slug}.cncg.in`}
+                href={cityCanonical(c.slug)}
                 className="font-mono underline hover:text-blue-600"
               >
                 {c.slug}.cncg.in

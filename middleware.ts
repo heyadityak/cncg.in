@@ -40,18 +40,42 @@ export function middleware(request: NextRequest) {
   //   "cncg.in" / "www.*" → no sub
   const sub = hostname.replace(/\.cncg\.in(:\d+)?$/, "");
 
-  // Root domain — render the India map (no rewrite)
+  // Root domain — canonicalize path-based routes to subdomains
   if (!sub || sub === hostname || sub === "www") {
+    const cityMatch = pathname.match(/^\/city\/([^/]+)\/?$/);
+    if (cityMatch && CITY_SLUGS.has(cityMatch[1])) {
+      return NextResponse.redirect(
+        new URL(`https://${cityMatch[1]}.cncg.in/`),
+        301
+      );
+    }
+
+    const stateMatch = pathname.match(/^\/state\/([^/]+)\/?$/);
+    if (stateMatch && STATE_SLUGS.has(stateMatch[1])) {
+      return NextResponse.redirect(
+        new URL(`https://${stateMatch[1]}.cncg.in/`),
+        301
+      );
+    }
+
     return NextResponse.next();
   }
 
   if (STATE_SLUGS.has(sub)) {
+    // Collapse non-root paths on state subdomains to the canonical home
+    if (pathname !== "/" && pathname !== "") {
+      return NextResponse.redirect(new URL(`https://${sub}.cncg.in/`), 301);
+    }
     const url = request.nextUrl.clone();
     url.pathname = `/state/${sub}`;
     return NextResponse.rewrite(url);
   }
 
   if (CITY_SLUGS.has(sub)) {
+    // Collapse non-root paths on city subdomains to the canonical home
+    if (pathname !== "/" && pathname !== "") {
+      return NextResponse.redirect(new URL(`https://${sub}.cncg.in/`), 301);
+    }
     const url = request.nextUrl.clone();
     url.pathname = `/city/${sub}`;
     return NextResponse.rewrite(url);

@@ -1,12 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { MapPin, Users, Globe } from "lucide-react";
 import { groups } from "@/data/groups";
 import IndiaMapClient from "@/components/india-map-client";
 import NearestGroup from "@/components/nearest-group";
 import SiteFooter from "@/components/site-footer";
+import { cityCanonical, SITE_URL, stateCanonical } from "@/lib/seo";
 
 const totalGroups = groups.reduce((sum, s) => sum + s.cities.length, 0);
 const totalStates = groups.length;
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE_URL },
+};
 
 export default function HomePage() {
   return (
@@ -50,8 +56,9 @@ export default function HomePage() {
           Find Your Cloud Native Community
         </h1>
         <p className="text-slate-600 max-w-xl mx-auto mb-6">
-          Discover CNCF-affiliated groups across India. Click a highlighted
-          state to explore groups in that region.
+          Discover every CNCF and Cloud Native Community Group (CNCG) in our
+          directory across India. Click a highlighted state to explore its local
+          Kubernetes and cloud-native chapters.
         </p>
         <div className="flex items-center justify-center gap-6">
           <div className="flex items-center gap-1.5 text-sm text-slate-700">
@@ -96,7 +103,7 @@ export default function HomePage() {
                     href={
                       process.env.NODE_ENV === "development"
                         ? `/state/${state.slug}`
-                        : `https://${state.slug}.cncg.in`
+                        : stateCanonical(state.slug)
                     }
                     className="flex items-center justify-between px-4 py-3 hover:bg-blue-50 transition-colors group"
                   >
@@ -134,6 +141,54 @@ export default function HomePage() {
           City group
         </div>
       </div>
+
+      {/* All CNCF / Cloud Native chapters — crawlable internal links */}
+      <section className="px-6 pb-10 max-w-6xl mx-auto w-full">
+        <h2 className="text-lg font-semibold text-slate-900 text-center mb-2">
+          All CNCF &amp; Cloud Native chapters in India
+        </h2>
+        <p className="text-sm text-slate-600 text-center max-w-2xl mx-auto mb-5">
+          Browse every listed CNCG chapter. Each city page covers its CNCF
+          community, Cloud Native meetups, Kubernetes events, and ways to join.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {groups.map((state) => (
+            <section
+              key={state.slug}
+              aria-labelledby={`chapters-${state.slug}`}
+              className="rounded-xl border border-slate-200 bg-white p-4"
+            >
+              <h3
+                id={`chapters-${state.slug}`}
+                className="font-semibold text-slate-900 mb-2"
+              >
+                CNCF {state.name}
+              </h3>
+              <ul className="space-y-1.5 text-sm">
+                {state.cities.map((city) => (
+                  <li key={city.slug}>
+                    <Link
+                      href={
+                        process.env.NODE_ENV === "development"
+                          ? `/city/${city.slug}`
+                          : cityCanonical(city.slug)
+                      }
+                      title={`CNCF ${city.name} — Cloud Native ${city.name}`}
+                      className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                      CNCF {city.name}
+                      <span className="sr-only">
+                        {" "}
+                        — Cloud Native {city.name} — CNCG {city.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </section>
 
       <SiteFooter />
     </div>
