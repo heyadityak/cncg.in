@@ -17,8 +17,9 @@
         "latestEvent": {
           "name": "Kubernetes Bangalore meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/52r68y4/event/quau4tx",
-          "startsAt": "2026-07-26T04:30:00.000Z",
-          "syncedAt": "2026-06-28T19:20:18.645Z",
+          "startsAt": "2026-07-26T03:30:00.000Z",
+          "syncedAt": "2026-07-18T19:03:55.252Z",
+          "endsAt": "2026-07-26T08:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
           "venueCity": "Bengaluru"
