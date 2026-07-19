@@ -631,11 +631,11 @@
         "description": "Cloud Native Computing Group Thiruvananthapuram connects cloud-native practitioners in Kerala's capital, focusing on DevOps, CI/CD, and Kubernetes-based application delivery.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/7b3tqkv",
         "latestEvent": {
-          "name": "CNCG Trivandrum + DevOps Malayalam Community Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/tk3zb8b",
-          "startsAt": "2026-07-18T04:30:00.000Z",
-          "syncedAt": "2026-07-08T19:25:58.798Z",
-          "endsAt": "2026-07-18T07:30:00.000Z",
+          "name": "CNCG Trivandrum Monthly Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/3wkcyck",
+          "startsAt": "2026-08-22T09:30:00.000Z",
+          "syncedAt": "2026-07-19T02:41:17.337Z",
+          "endsAt": "2026-08-26T11:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Thiruvananthapuram"
