@@ -415,13 +415,14 @@
         "description": "Cloud Native Computing Group Hyderabad is one of India's most active CNCF communities, running monthly sessions on Kubernetes, Istio, and cloud-native observability.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/wwpsss3",
         "latestEvent": {
-          "name": "July Virtual Meetup - KubeCon India 2026: The Highlights You Can't Miss",
-          "eventUrl": "https://ocgroups.dev/cncf/group/wwpsss3/event/gm49pxn",
-          "startsAt": "2026-07-16T14:30:00.000Z",
-          "syncedAt": "2026-07-13T19:24:06.971Z",
-          "endsAt": "2026-07-16T16:00:00.000Z",
+          "name": "Cloud Native Hyderabad July Meetup - AI x Observability",
+          "eventUrl": "https://ocgroups.dev/cncf/group/wwpsss3/event/aewkcc5",
+          "startsAt": "2026-07-25T04:00:00.000Z",
+          "syncedAt": "2026-07-20T08:58:19.722Z",
+          "endsAt": "2026-07-25T08:00:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "virtual"
+          "kind": "in-person",
+          "venueCity": "Hyderabad"
         },
         "iconUrl": "/group-icons/hyderabad.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/64a6197b51b65fcd3ad82b818dbfbf031aa89ceab3069e6f86236d0252217c2c.jpg",
