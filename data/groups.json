@@ -17,8 +17,8 @@
         "latestEvent": {
           "name": "Kubernetes Bangalore meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/52r68y4/event/quau4tx",
-          "startsAt": "2026-07-26T03:30:00.000Z",
-          "syncedAt": "2026-07-18T19:03:55.252Z",
+          "startsAt": "2026-07-26T02:30:00.000Z",
+          "syncedAt": "2026-07-24T08:27:54.956Z",
           "endsAt": "2026-07-26T08:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
@@ -793,8 +793,8 @@
         "latestEvent": {
           "name": "Infra in the Wild",
           "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/exqtu83",
-          "startsAt": "2026-07-25T04:30:00.000Z",
-          "syncedAt": "2026-06-25T14:34:24.638Z",
+          "startsAt": "2026-07-25T04:00:00.000Z",
+          "syncedAt": "2026-07-24T08:27:56.016Z",
           "endsAt": "2026-07-25T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
