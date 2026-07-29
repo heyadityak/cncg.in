@@ -176,13 +176,14 @@
         "description": "Cloud Native Nashik is a thriving community of developers, engineers, and technology enthusiasts focused on cloud-native technologies, organizing regular meetups, workshops, and knowledge-sharing sessions.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/wsvh9fb",
         "latestEvent": {
-          "name": "Cloud Native Nashik - July Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/wsvh9fb/event/57mbj68",
-          "startsAt": "2026-07-12T04:30:00.000Z",
-          "syncedAt": "2026-07-11T07:56:20.410Z",
-          "endsAt": "2026-07-12T09:00:00.000Z",
+          "name": "From Laptop to Production: Containerize & Deploy a GenAI Microservice",
+          "eventUrl": "https://ocgroups.dev/cncf/group/wsvh9fb/event/efwvenp",
+          "startsAt": "2026-08-01T09:00:00.000Z",
+          "syncedAt": "2026-07-29T08:41:06.632Z",
+          "endsAt": "2026-08-01T12:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person"
+          "kind": "in-person",
+          "venueCity": "Nashik"
         },
         "iconUrl": "/group-icons/nashik.png",
         "iconSourceUrl": "https://ocgroups.dev/images/ce1644e4d77d34dee996b80cca41c0a34eadd2716521c68b8a202baba03c8ae5.png",
