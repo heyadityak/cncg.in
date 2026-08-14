@@ -696,13 +696,14 @@
         "description": "Kubernetes Kerala is a community group in Thrissur for Kubernetes and cloud-native enthusiasts, discussing the ecosystem and organizing the Cloud Native Summit Kerala.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/7zqh22z",
         "latestEvent": {
-          "name": "Platform Engineering and Developer Experience: From friction to flow",
-          "eventUrl": "https://ocgroups.dev/cncf/group/7zqh22z/event/fmp9vrg",
-          "startsAt": "2026-08-12T12:00:00.000Z",
-          "syncedAt": "2026-08-12T13:08:25.232Z",
-          "endsAt": "2026-08-12T13:00:00.000Z",
-          "timezone": "Asia/Kolkata",
-          "kind": "virtual"
+          "name": "Cloud Native Summit Kerala 2026",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7zqh22z/event/cvkfkbc",
+          "startsAt": "2026-08-22T03:30:00.000Z",
+          "syncedAt": "2026-08-14T07:24:54.615Z",
+          "endsAt": "2026-08-22T12:30:00.000Z",
+          "timezone": "Asia/Calcutta",
+          "kind": "in-person",
+          "venueCity": "Kochi"
         },
         "iconUrl": "/group-icons/thrissur.jpeg",
         "iconSourceUrl": "https://ocgroups.dev/images/1870cd49b2151eb35bda3f38decc5098f853cc381ec81e6bdb2b5966c20ad601.jpeg",
