@@ -110,11 +110,11 @@
         "description": "Cloud Native Computing Group Pune is a vibrant community of cloud-native enthusiasts, covering topics from container orchestration to service meshes and GitOps.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/p5hsakp",
         "latestEvent": {
-          "name": "CNCG Pune August Meetup (Invite Only)",
-          "eventUrl": "https://ocgroups.dev/cncf/group/p5hsakp/event/rc3xc52",
-          "startsAt": "2026-08-22T04:00:00.000Z",
-          "syncedAt": "2026-07-21T08:28:53.245Z",
-          "endsAt": "2026-08-22T08:30:00.000Z",
+          "name": "CNCG Pune September Meetup: Building Sustainable & Carbon-Aware Cloud Native Systems",
+          "eventUrl": "https://ocgroups.dev/cncf/group/p5hsakp/event/jz7gbau",
+          "startsAt": "2026-10-17T04:30:00.000Z",
+          "syncedAt": "2026-08-23T01:17:35.157Z",
+          "endsAt": "2026-10-17T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Pune"
@@ -541,14 +541,13 @@
         "description": "Cloud Native Computing Group Kolkata is East India's premier cloud-native community, bringing together engineers and architects to explore CNCF projects and cloud-native patterns.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/9qb7ddk",
         "latestEvent": {
-          "name": "KubeKotha",
-          "eventUrl": "https://ocgroups.dev/cncf/group/9qb7ddk/event/e5623dz",
-          "startsAt": "2026-08-22T04:00:00.000Z",
-          "syncedAt": "2026-08-14T13:05:37.177Z",
-          "endsAt": "2026-08-22T08:30:00.000Z",
+          "name": "ClusterVerse",
+          "eventUrl": "https://ocgroups.dev/cncf/group/9qb7ddk/event/g9p7nqs",
+          "startsAt": "2026-09-26T05:30:00.000Z",
+          "syncedAt": "2026-08-23T01:17:35.502Z",
+          "endsAt": "2026-09-26T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person",
-          "venueCity": "Kolkata"
+          "kind": "in-person"
         },
         "iconUrl": "/group-icons/kolkata.png",
         "iconSourceUrl": "https://ocgroups.dev/images/ed18e686c189773ebb5f775ab2769f9f27eb0346fc0de284ee4718747e13566b.png",
@@ -635,10 +634,10 @@
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/7b3tqkv",
         "latestEvent": {
           "name": "CNCG Trivandrum Monthly Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/3wkcyck",
-          "startsAt": "2026-08-22T09:30:00.000Z",
-          "syncedAt": "2026-07-19T02:41:17.337Z",
-          "endsAt": "2026-08-26T11:30:00.000Z",
+          "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/cygfmy2",
+          "startsAt": "2026-09-23T09:30:00.000Z",
+          "syncedAt": "2026-08-23T01:17:35.589Z",
+          "endsAt": "2026-09-23T11:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Thiruvananthapuram"
@@ -792,14 +791,13 @@
         "description": "Cloud Native Computing Group Noida serves the booming NCR tech corridor, hosting sessions on cloud-native security, Kubernetes operations, and platform engineering.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/u7abdpk",
         "latestEvent": {
-          "name": "Kube x Agentic AI",
-          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/vxqbsfy",
-          "startsAt": "2026-08-22T04:00:00.000Z",
-          "syncedAt": "2026-07-31T08:49:59.457Z",
-          "endsAt": "2026-08-22T08:00:00.000Z",
+          "name": "AI in Observability",
+          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/vh2etr4",
+          "startsAt": "2026-09-26T04:00:00.000Z",
+          "syncedAt": "2026-08-23T01:17:35.710Z",
+          "endsAt": "2026-09-26T08:00:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person",
-          "venueCity": "Noida"
+          "kind": "in-person"
         },
         "iconUrl": "/group-icons/noida.png",
         "iconSourceUrl": "https://ocgroups.dev/images/6e7b6887c9015acec51386d9322ccbc46809995553339d86da74bd90bff16b1c.png"
