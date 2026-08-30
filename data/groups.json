@@ -176,11 +176,11 @@
         "description": "Cloud Native Nashik is a thriving community of developers, engineers, and technology enthusiasts focused on cloud-native technologies, organizing regular meetups, workshops, and knowledge-sharing sessions.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/wsvh9fb",
         "latestEvent": {
-          "name": "From Laptop to Production: Containerize & Deploy a GenAI Microservice",
-          "eventUrl": "https://ocgroups.dev/cncf/group/wsvh9fb/event/efwvenp",
-          "startsAt": "2026-08-01T09:00:00.000Z",
-          "syncedAt": "2026-07-29T08:41:06.632Z",
-          "endsAt": "2026-08-01T12:30:00.000Z",
+          "name": "September Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/wsvh9fb/event/v27qv2y",
+          "startsAt": "2026-09-02T04:30:00.000Z",
+          "syncedAt": "2026-08-30T11:22:05.355Z",
+          "endsAt": "2026-09-02T05:59:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Nashik"
@@ -613,13 +613,14 @@
         "description": "Cloud Native Computing Group Kochi drives cloud-native learning in Kerala, with a strong focus on Kubernetes, serverless, and open-source contributions from the developer community.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/h47f5ed",
         "latestEvent": {
-          "name": "CNCG Kochi August Offlinet Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/h47f5ed/event/7jnwt53",
-          "startsAt": "2026-08-01T04:00:00.000Z",
-          "syncedAt": "2026-07-23T02:42:01.842Z",
-          "endsAt": "2026-08-01T07:30:00.000Z",
+          "name": "CNCG Kochi September Offline Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/h47f5ed/event/zt98e7z",
+          "startsAt": "2026-09-12T04:00:00.000Z",
+          "syncedAt": "2026-08-30T11:22:05.653Z",
+          "endsAt": "2026-09-12T07:30:00.000Z",
           "timezone": "Asia/Calcutta",
-          "kind": "in-person"
+          "kind": "in-person",
+          "venueCity": "Kakkanad"
         },
         "iconUrl": "/group-icons/kochi.png",
         "iconSourceUrl": "https://ocgroups.dev/images/86675f053d914e3add2d354dcb656afad3741a7b84c8941fcc9dea3dbf66974e.png",
