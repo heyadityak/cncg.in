@@ -81,6 +81,34 @@ tasks:
     cmds:
       - npx wrangler deployments list
 
+  # ── Data sync ──────────────────────────────────────────────────────────────
+
+  sync:groups:
+    desc: "Add/remove India CNCG groups in data/groups.yaml from ocgroups.dev"
+    cmds:
+      - npm run sync:groups
+      - npm run smoke:sync
+
+  sync:groups:dry:
+    desc: "Preview roster changes without writing data/groups.yaml"
+    cmds:
+      - npm run sync:groups -- --dry-run
+
+  sync:events:
+    desc: "Refresh latest event + mirrored icon per group from ocgroups.dev"
+    cmds:
+      - npm run sync:events
+
+  sync:cfp:
+    desc: "Refresh CFP form links from ocgroups.dev group descriptions"
+    cmds:
+      - npm run sync:cfp
+
+  smoke:sync:
+    desc: "Regenerate STATES/CITIES in scripts/smoke-test.sh from data/groups.yaml"
+    cmds:
+      - npm run smoke:sync
+
   # ── Misc ───────────────────────────────────────────────────────────────────
 
   lint:

@@ -77,11 +77,20 @@ cncg.in/
 │   └── _redirects                CDN-level redirect rules
 ├── scripts/
 │   ├── build-groups.mjs          YAML → JSON for app imports
+│   ├── groups-yaml.mjs           Shared groups.yaml reader/writer (one header)
+│   ├── sync-ocg-groups.mjs       Adds/removes groups from ocgroups.dev (weekly)
+│   ├── sync-ocg-events.mjs       Latest event + icon per group (every 6h)
+│   ├── sync-ocg-cfp.mjs          CFP form links per group
+│   ├── update-smoke-lists.mjs    Regenerates smoke-test.sh slug arrays
+│   ├── verify-smoke-lists.mjs    Fails the build if those arrays drift
 │   └── smoke-test.sh             Post-deploy URL health check
 ├── middleware.ts                 Subdomain routing (state/city rewrites)
 ├── wrangler.toml                 Cloudflare Worker config
 ├── Taskfile.yml                  Task runner (https://taskfile.dev)
-└── .github/workflows/deploy.yml  CI/CD to Cloudflare Workers
+└── .github/workflows/
+    ├── deploy.yml                CI/CD to Cloudflare Workers
+    ├── sync-events.yml           Event + icon sync every 6 hours
+    └── sync-groups.yml           Group roster add/remove, weekly
 ```
 
 ---
@@ -131,13 +140,15 @@ This is the most common contribution and you don't need any web-dev experience t
 
 CNCG India is a directory, not a registry. Every group we list must have a corresponding entry on <https://ocgroups.dev> (the official CNCF Open Community Groups platform). If the group you want to add is not on ocgroups.dev yet, please first apply through <https://community.cncf.io/chapters>.
 
+Once it is listed there, the weekly [group roster sync](.github/workflows/sync-groups.yml) picks it up on its own — it adds any active Indian CNCF group that is missing here and removes ones that disappear upstream. A PR is still very welcome: the automated entry only carries the slug, display name, coordinates, and upstream link, so `organizer`, `description`, and social links still come from a human. To pull the roster in immediately, a maintainer can run `npm run sync:groups` locally or dispatch the workflow.
+
 ### Step 2 — open `data/groups.yaml`
 
 The file is a YAML array of states. Find the state your city belongs to, or add a new state entry if needed.
 
 Each state and city entry uses these fields (types are defined in `data/groups.ts`):
 
-`latestEvent`, `iconUrl`, and `iconSourceUrl` are **auto-synced** from [ocgroups.dev](https://ocgroups.dev) every 6 hours — do not edit them by hand. Icons are mirrored to `public/group-icons/` and served locally.
+`latestEvent`, `iconUrl`, and `iconSourceUrl` are **auto-synced** from [ocgroups.dev](https://ocgroups.dev) every 6 hours — do not edit them by hand. Icons are mirrored to `public/group-icons/` and served locally. Whole entries are added and removed weekly by the same source, so keep `ocGroupUrl` accurate: an entry whose upstream group is gone will be dropped on the next run. An entry with no `ocGroupUrl` is treated as manually curated and is never removed.
 
 ```ts
 type CityGroup = {
@@ -319,13 +330,17 @@ This project currently relies on three forms of verification — there's no Jest
 
 ### 3. The smoke test
 
-`scripts/smoke-test.sh` hits every subdomain (root + 15 states + 41 cities + a couple of static asset paths) against the live deployment and asserts the expected HTTP status code. Run it after deploying to confirm the routing tier is healthy:
+`scripts/smoke-test.sh` hits every subdomain (root + every state + every city + a couple of static asset paths) against the live deployment and asserts the expected HTTP status code. Run it after deploying to confirm the routing tier is healthy:
 
 ```bash
 ./scripts/smoke-test.sh
 ```
 
-If you add a new state or city, please update the `STATES` / `CITIES` arrays in that script so it stays in sync.
+Its `STATES` / `CITIES` arrays must match `data/groups.yaml` — `npm run smoke:verify` gates the deploy on it. After adding or removing a group, run:
+
+```bash
+npm run smoke:sync    # regenerates both arrays from data/groups.yaml
+```
 
 ---
 

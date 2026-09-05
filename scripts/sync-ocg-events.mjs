@@ -9,7 +9,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { parse, stringify } from "yaml";
+import { parse } from "yaml";
+import { writeGroups } from "./groups-yaml.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -336,20 +337,7 @@ await mapWithConcurrency(targets, CONCURRENCY, async ({ city, groupSlug }) => {
 const referencedIcons = collectReferencedIconPaths(groups);
 const staleRemoved = pruneStaleIcons(referencedIcons);
 
-const header = `# CNCG community groups across India
-# Edit this file to add or update groups.
-# latestEvent, iconUrl, and iconSourceUrl are updated by scripts/sync-ocg-events.mjs
-# iconUrl points to mirrored files under public/group-icons/
-
-`;
-
-const body = stringify(groups, {
-  lineWidth: 0,
-  defaultKeyType: "PLAIN",
-  defaultStringType: "QUOTE_DOUBLE",
-});
-
-fs.writeFileSync(yamlPath, `${header}${body}`);
+writeGroups(groups);
 
 console.log(
   `\nDone. events(updated=${eventsUpdated}, cleared=${eventsCleared}, unchanged=${eventsUnchanged}); icons(updated=${iconsUpdated}, cleared=${iconsCleared}, unchanged=${iconsUnchanged}, staleRemoved=${staleRemoved}); failed=${failed}`

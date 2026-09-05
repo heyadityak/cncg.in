@@ -1,0 +1,110 @@
+# Reconcile data/groups.yaml with the CNCF groups published for India on
+# ocgroups.dev once a week: groups that appeared upstream are added, groups that
+# vanished or were deactivated are removed. Newly added groups then get their
+# events and icons through the usual event sync, and scripts/smoke-test.sh is
+# regenerated so `npm run smoke:verify` (a deploy gate) keeps passing.
+#
+# When data changes, this commits to main and triggers a Cloudflare Workers
+# deploy. (Pushes made with GITHUB_TOKEN do not fire push-triggered workflows,
+# so deploy is invoked explicitly via workflow_call.)
+#
+# The run summary lists every add/remove plus anything that needs a human look
+# (new entries have no organizer/description, new states get an approximate
+# centroid). Check Actions → Sync CNCG Groups → Summary after a run.
+
+name: Sync CNCG Groups
+
+on:
+  schedule:
+    # Mondays 03:20 UTC (08:50 IST). Offset from the 6-hourly event sync.
+    - cron: "20 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Report roster changes without committing
+        type: boolean
+        default: false
+
+# Shared with Sync OCG Events so the two never race to push to main.
+concurrency:
+  group: sync-data
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Reconcile group roster
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.changes.outputs.changed }}
+      commit_sha: ${{ steps.changes.outputs.commit_sha }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Reconcile roster against ocgroups.dev
+        run: npm run sync:groups -- ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Refresh smoke-test slug lists
+        run: npm run smoke:sync
+
+      # Pulls events and mirrors icons for any group added above. Exits non-zero
+      # when individual groups fail upstream, which must not fail the run — the
+      # roster change is still valid and the next event sync retries.
+      - name: Sync events and icons
+        continue-on-error: true
+        run: npm run sync:events
+
+      - name: Regenerate groups.json
+        run: npm run build:groups
+
+      - name: Verify smoke lists match data
+        run: npm run smoke:verify
+
+      - name: Commit and push if changed
+        id: changes
+        if: ${{ !inputs.dry_run }}
+        run: |
+          set -euo pipefail
+
+          PATHS=(data/groups.yaml data/groups.json public/group-icons scripts/smoke-test.sh)
+
+          if git diff --quiet -- "${PATHS[@]}"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No roster changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${PATHS[@]}"
+          git commit \
+            -m "chore(data): sync CNCG group roster" \
+            -m "Automated add/remove of India CNCF groups from ocgroups.dev (weekly)."
+
+          # The event sync may have pushed while this run was in flight.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    name: Build & Deploy
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.sync.outputs.commit_sha }}
+    secrets: inherit

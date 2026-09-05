@@ -14,7 +14,7 @@ STATES=(karnataka maharashtra gujarat delhi telangana tamil-nadu west-bengal
 
 CITIES=(bangalore mysore platform-engineering-bengaluru
         mumbai pune thane nagpur nashik aurangabad jalgaon kubernetes-pune
-        ahmedabad gandhinagar rajkot vadodara
+        ahmedabad gandhinagar rajkot vadodara surat
         new-delhi security-india
         hyderabad
         chennai coimbatore trichy madurai pollachi
@@ -22,7 +22,11 @@ CITIES=(bangalore mysore platform-engineering-bengaluru
         kochi trivandrum kozhikode kottayam thrissur
         jaipur bikaner
         lucknow noida kanpur
-        bhubaneswar chandigarh dehradun gurugram ranchi)
+        bhubaneswar
+        chandigarh
+        dehradun
+        gurugram
+        ranchi)
 
 # Pre-build resolve flags
 for s in "${STATES[@]}"; do add_resolve "$s.cncg.in"; done

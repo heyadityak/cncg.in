@@ -10,8 +10,9 @@ on:
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
+# Shared with Sync CNCG Groups so the two never race to push to main.
 concurrency:
-  group: sync-ocg-events
+  group: sync-data
   cancel-in-progress: false
 
 jobs:
@@ -58,6 +59,9 @@ jobs:
           git commit \
             -m "chore(data): sync OCG events and group icons" \
             -m "Automated update from ocgroups.dev (scheduled every 6 hours)."
+
+          # The weekly roster sync may have pushed while this run was in flight.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

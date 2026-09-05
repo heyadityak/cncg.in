@@ -15,6 +15,7 @@
     "postinstall": "npm run build:groups",
     "build:groups": "node scripts/build-groups.mjs",
     "sync:events": "node scripts/sync-ocg-events.mjs",
+    "sync:groups": "node scripts/sync-ocg-groups.mjs",
     "sync:cfp": "node scripts/sync-ocg-cfp.mjs",
     "dev": "npm run build:groups && next dev --turbopack",
     "build": "npm run build:groups && next build",
@@ -24,7 +25,8 @@
     "deploy:wrangler": "npm run build:cf && wrangler deploy",
     "start": "next start",
     "lint": "eslint",
-    "smoke:verify": "node scripts/verify-smoke-lists.mjs"
+    "smoke:verify": "node scripts/verify-smoke-lists.mjs",
+    "smoke:sync": "node scripts/update-smoke-lists.mjs"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.11",

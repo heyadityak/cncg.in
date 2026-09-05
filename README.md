@@ -50,6 +50,19 @@ The full guide is in [CONTRIBUTING.md](./CONTRIBUTING.md). The short version:
 - **Tailwind CSS** + **Shadcn UI** for styling
 - **`middleware.ts`** for subdomain → path rewriting
 
+## Self-updating data
+
+The directory keeps itself current from [ocgroups.dev](https://ocgroups.dev), the official CNCF Open Community Groups platform:
+
+| Workflow | Schedule | What it does |
+|---|---|---|
+| [`sync-groups.yml`](.github/workflows/sync-groups.yml) | Weekly (Mon 03:20 UTC) | Adds Indian CNCF groups that appeared upstream, removes ones that vanished or were deactivated. The state is resolved offline from `public/india-states-simple.geojson`. |
+| [`sync-events.yml`](.github/workflows/sync-events.yml) | Every 6 hours | Refreshes each group's latest event and mirrors its icon into `public/group-icons/`. |
+
+Both commit to `main` and trigger a deploy when the data actually changes. New entries carry only slug, name, coordinates, and the upstream link — `organizer`, `description`, and socials are still human-curated, and the run summary lists anything that needs a look.
+
+Locally: `task sync:groups:dry` previews roster changes, `task sync:groups` applies them.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml` which builds and deploys to Cloudflare Workers automatically.
