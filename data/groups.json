@@ -18,11 +18,7 @@
           "name": "Kubernetes Bangalore meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/52r68y4/event/quau4tx",
           "startsAt": "2026-07-26T02:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-07-24T08:27:54.956Z",
-=======
           "syncedAt": "2026-09-04T11:59:40.157Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-07-26T08:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
@@ -94,11 +90,7 @@
           "name": "Cloud Native Mumbai: Sept Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/k33mmvw/event/ncd3wmd",
           "startsAt": "2026-09-12T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-30T16:08:41.941Z",
-=======
           "syncedAt": "2026-09-04T11:59:39.289Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-12T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -121,11 +113,7 @@
           "name": "CNCG Pune September Meetup: Building Sustainable & Carbon-Aware Cloud Native Systems",
           "eventUrl": "https://ocgroups.dev/cncf/group/p5hsakp/event/jz7gbau",
           "startsAt": "2026-10-17T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-23T01:17:35.157Z",
-=======
           "syncedAt": "2026-09-04T11:59:39.304Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-10-17T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -146,11 +134,7 @@
           "name": "Cloud Native Thane - August Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/8y6vc7x/event/dsjksx3",
           "startsAt": "2026-08-22T05:00:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-17T06:54:51.828Z",
-=======
           "syncedAt": "2026-09-04T11:59:39.791Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-08-22T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -173,11 +157,7 @@
           "name": "Getting Started with OpenSearch: A Community Meetup by OpenSearch Project & Cloud Native Nagpur",
           "eventUrl": "https://ocgroups.dev/cncf/group/8795kew/event/vf2huj2",
           "startsAt": "2026-09-05T10:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-18T12:44:49.582Z",
-=======
           "syncedAt": "2026-09-04T11:59:39.240Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-05T12:00:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -199,11 +179,7 @@
           "name": "September Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/wsvh9fb/event/v27qv2y",
           "startsAt": "2026-09-02T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-30T11:22:05.355Z",
-=======
           "syncedAt": "2026-09-04T11:59:39.823Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-02T05:59:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -267,11 +243,7 @@
           "name": "#62: Grafana & Friends x Kubernetes Pune Happy Hours",
           "eventUrl": "https://ocgroups.dev/cncf/group/h79jub8/event/2eth5ez",
           "startsAt": "2026-09-05T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-09-04T10:42:59.840Z",
-=======
           "syncedAt": "2026-09-04T11:59:40.435Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-05T08:00:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -324,11 +296,7 @@
           "name": "Cloud Native Day Gandhinagar",
           "eventUrl": "https://ocgroups.dev/cncf/group/q26xxhw/event/eznrcy3",
           "startsAt": "2026-09-05T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-28T21:46:26.990Z",
-=======
           "syncedAt": "2026-09-04T11:59:40.447Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-05T10:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
@@ -373,18 +341,10 @@
           "name": "Cloud Native Vadodara – July Meetup + KCD Gujarat 2026 Roadshow",
           "eventUrl": "https://ocgroups.dev/cncf/group/q486qd9/event/49wmjxw",
           "startsAt": "2026-08-01T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-07-23T19:17:40.069Z",
-          "endsAt": "2026-08-01T06:30:00.000Z",
-          "timezone": "Asia/Kolkata",
-          "kind": "in-person",
-          "venueCity": "Vadodara"
-=======
           "syncedAt": "2026-09-04T11:59:40.739Z",
           "endsAt": "2026-08-01T07:15:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "virtual"
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
         },
         "iconUrl": "/group-icons/vadodara.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/df6f4e346671d96df46af6e2adeed941adf65790f343330a9dabe0f03904a0c7.jpg"
@@ -405,8 +365,8 @@
           "kind": "in-person",
           "venueCity": "Surat"
         },
-        "iconUrl": "/group-icons/surat.svg",
-        "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
+        "iconUrl": "/group-icons/surat.png",
+        "iconSourceUrl": "https://ocgroups.dev/images/0ea0cb11458d32f4d704852dc2ed028aab073447ca4ed7147428833c895a22fd.png"
       }
     ]
   },
@@ -479,11 +439,7 @@
           "name": "Cloud Native Hyderabad August Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/wwpsss3/event/rrqc47z",
           "startsAt": "2026-08-29T04:00:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-18T06:42:27.748Z",
-=======
           "syncedAt": "2026-09-04T11:59:41.312Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-08-29T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -608,11 +564,7 @@
           "name": "ClusterVerse",
           "eventUrl": "https://ocgroups.dev/cncf/group/9qb7ddk/event/g9p7nqs",
           "startsAt": "2026-09-19T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-25T12:46:05.686Z",
-=======
           "syncedAt": "2026-09-04T11:59:41.334Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-19T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person"
@@ -683,11 +635,7 @@
           "name": "CNCG Kochi September Offline Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/h47f5ed/event/zt98e7z",
           "startsAt": "2026-09-12T04:00:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-30T11:22:05.653Z",
-=======
           "syncedAt": "2026-09-04T11:59:41.619Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-12T07:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
@@ -709,11 +657,7 @@
           "name": "CNCG Trivandrum Monthly Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/7b3tqkv/event/cygfmy2",
           "startsAt": "2026-09-23T09:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-23T01:17:35.589Z",
-=======
           "syncedAt": "2026-09-04T11:59:41.639Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-23T11:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
@@ -777,11 +721,7 @@
           "name": "Cloud Native Summit Kerala 2026",
           "eventUrl": "https://ocgroups.dev/cncf/group/7zqh22z/event/cvkfkbc",
           "startsAt": "2026-08-22T03:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-14T07:24:54.615Z",
-=======
           "syncedAt": "2026-09-04T11:59:42.173Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-08-22T12:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
@@ -875,11 +815,7 @@
           "name": "AI in Observability",
           "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/vh2etr4",
           "startsAt": "2026-09-26T04:00:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-08-23T01:17:35.710Z",
-=======
           "syncedAt": "2026-09-04T11:59:42.227Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-09-26T08:00:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person"
@@ -956,11 +892,7 @@
           "name": "CNCG Chandigarh Meetup",
           "eventUrl": "https://ocgroups.dev/cncf/group/utpgj29/event/2e4pgq3",
           "startsAt": "2026-10-17T04:30:00.000Z",
-<<<<<<< HEAD
-          "syncedAt": "2026-09-02T10:44:44.914Z",
-=======
           "syncedAt": "2026-09-04T11:59:42.457Z",
->>>>>>> e9f6ace ((feat): add missing groups, allow auto-update of groups)
           "endsAt": "2026-10-17T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person"
