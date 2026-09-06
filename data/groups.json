@@ -293,14 +293,13 @@
         "description": "CNCF Gandhinagar (Cloud Native Gandhinagar / CNCG Gandhinagar) serves Gujarat's capital city, bringing together Kubernetes and cloud-native enthusiasts for meetups, workshops, and deep-dives into CNCF projects.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/q26xxhw",
         "latestEvent": {
-          "name": "Cloud Native Day Gandhinagar",
-          "eventUrl": "https://ocgroups.dev/cncf/group/q26xxhw/event/eznrcy3",
-          "startsAt": "2026-09-05T04:30:00.000Z",
-          "syncedAt": "2026-09-04T11:59:40.447Z",
-          "endsAt": "2026-09-05T10:30:00.000Z",
-          "timezone": "Asia/Calcutta",
-          "kind": "in-person",
-          "venueCity": "Gandhinagagar"
+          "name": "Kubernetes Community Day Gujarat 2026",
+          "eventUrl": "https://ocgroups.dev/cncf/group/q26xxhw/event/ajd7kx4",
+          "startsAt": "2026-09-19T03:30:00.000Z",
+          "syncedAt": "2026-09-06T03:10:21.163Z",
+          "endsAt": "2026-09-19T11:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person"
         },
         "iconUrl": "/group-icons/gandhinagar.svg",
         "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg",
