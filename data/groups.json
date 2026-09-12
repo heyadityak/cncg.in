@@ -270,11 +270,11 @@
         "description": "CNCF Ahmedabad (Cloud Native Ahmedabad / CNCG Ahmedabad) is Gujarat's premier Cloud Native Community Group, hosting talks and workshops on Kubernetes, Prometheus, and the broader CNCF ecosystem for developers in Ahmedabad.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/pfcyuzd",
         "latestEvent": {
-          "name": "CNCG Ahmedabad x Docker Ahmedabad July 2026 In-Person Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/pfcyuzd/event/a6yvdf5",
-          "startsAt": "2026-07-18T04:30:00.000Z",
-          "syncedAt": "2026-07-12T13:19:30.945Z",
-          "endsAt": "2026-07-18T07:00:00.000Z",
+          "name": "Cloud Native AI Night: Pre-KCD Gujarat Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/pfcyuzd/event/23e3r4c",
+          "startsAt": "2026-09-18T12:30:00.000Z",
+          "syncedAt": "2026-09-12T15:05:22.345Z",
+          "endsAt": "2026-09-18T15:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Ahmedabad"
