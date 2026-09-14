@@ -154,11 +154,11 @@
         "description": "Cloud Native Computing Group Nagpur connects cloud-native practitioners in Central India, promoting open-source and CNCF technologies.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/8795kew",
         "latestEvent": {
-          "name": "Getting Started with OpenSearch: A Community Meetup by OpenSearch Project & Cloud Native Nagpur",
-          "eventUrl": "https://ocgroups.dev/cncf/group/8795kew/event/vf2huj2",
-          "startsAt": "2026-09-05T10:30:00.000Z",
-          "syncedAt": "2026-09-04T11:59:39.240Z",
-          "endsAt": "2026-09-05T12:00:00.000Z",
+          "name": "Beyond Search: Exploring OpenSearch",
+          "eventUrl": "https://ocgroups.dev/cncf/group/8795kew/event/3485g3x",
+          "startsAt": "2026-10-03T09:30:00.000Z",
+          "syncedAt": "2026-09-14T21:34:19.378Z",
+          "endsAt": "2026-10-03T11:30:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Nagpur"
