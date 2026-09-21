@@ -374,13 +374,14 @@
       description: "Cloud Native Computing Group Hyderabad is one of India's most active CNCF communities, running monthly sessions on Kubernetes, Istio, and cloud-native observability."
       ocGroupUrl: "https://ocgroups.dev/cncf/group/wwpsss3"
       latestEvent:
-        name: "September Virtual Meetup - Golden Kubestronaut Journey"
-        eventUrl: "https://ocgroups.dev/cncf/group/wwpsss3/event/gdest4y"
-        startsAt: "2026-09-15T14:30:00.000Z"
-        syncedAt: "2026-09-11T10:42:11.838Z"
-        endsAt: "2026-09-15T15:45:00.000Z"
+        name: "Cloud Native Hyderabad September Meetup"
+        eventUrl: "https://ocgroups.dev/cncf/group/wwpsss3/event/g4mycg6"
+        startsAt: "2026-09-26T04:00:00.000Z"
+        syncedAt: "2026-09-21T09:08:04.414Z"
+        endsAt: "2026-09-26T08:00:00.000Z"
         timezone: "Asia/Kolkata"
-        kind: "virtual"
+        kind: "in-person"
+        venueCity: "Hyderabad"
       iconUrl: "/group-icons/hyderabad.jpg"
       iconSourceUrl: "https://ocgroups.dev/images/64a6197b51b65fcd3ad82b818dbfbf031aa89ceab3069e6f86236d0252217c2c.jpg"
       twitterUrl: "https://x.com/cncfhyd"
@@ -830,3 +831,24 @@
       iconUrl: "/group-icons/ranchi.svg"
       iconSourceUrl: "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg"
       twitterUrl: "https://x.com/cloudnativernc"
+- slug: "madhya-pradesh"
+  name: "Madhya Pradesh"
+  lat: 23.9695
+  lng: 78.42
+  cities:
+    - slug: "indore"
+      name: "Indore"
+      lat: 22.7108
+      lng: 75.8077
+      ocGroupUrl: "https://ocgroups.dev/cncf/group/cq2hzpj"
+      latestEvent:
+        name: "Cloud Native Indore -  November 2024 - Meetup"
+        eventUrl: "https://ocgroups.dev/cncf/group/cq2hzpj/event/z82nhgy"
+        startsAt: "2024-11-23T05:30:00.000Z"
+        syncedAt: "2026-09-21T09:08:04.827Z"
+        endsAt: "2024-11-23T07:00:00.000Z"
+        timezone: "Asia/Kolkata"
+        kind: "in-person"
+        venueCity: "Indore"
+      iconUrl: "/group-icons/indore.png"
+      iconSourceUrl: "https://ocgroups.dev/images/7d7b2a8633656a7d0960e375bb232f15c5ef2f2e3ac6925fed274c616464735f.png"

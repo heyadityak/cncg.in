@@ -10,7 +10,7 @@ add_resolve () { RESOLVE+=(--resolve "$1:443:172.67.131.77"); }
 
 STATES=(karnataka maharashtra gujarat delhi telangana tamil-nadu west-bengal
         kerala rajasthan uttar-pradesh odisha chandigarh-ut uttarakhand haryana
-        jharkhand)
+        jharkhand madhya-pradesh)
 
 CITIES=(bangalore mysore platform-engineering-bengaluru
         mumbai pune thane nagpur nashik aurangabad jalgaon kubernetes-pune
@@ -26,7 +26,8 @@ CITIES=(bangalore mysore platform-engineering-bengaluru
         chandigarh
         dehradun
         gurugram
-        ranchi)
+        ranchi
+        indore)
 
 # Pre-build resolve flags
 for s in "${STATES[@]}"; do add_resolve "$s.cncg.in"; done
