@@ -977,14 +977,13 @@
         "description": "Cloud Native Ranchi is an official CNCF chapter dedicated to bridging the gap between local talent and cloud-native ecosystems in Jharkhand, providing support and inclusive, accessible events covering Kubernetes, containers, and modern infrastructure.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/kjqzaa6",
         "latestEvent": {
-          "name": "Cloud Native Ranchi: May Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/kjqzaa6/event/9csae6r",
-          "startsAt": "2026-05-17T05:30:00.000Z",
-          "syncedAt": "2026-05-27T10:05:26.756Z",
-          "endsAt": "2026-05-17T09:30:00.000Z",
+          "name": "Cloud Native Ranchi: September Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/kjqzaa6/event/uyypczg",
+          "startsAt": "2026-09-27T13:30:00.000Z",
+          "syncedAt": "2026-09-22T20:57:48.870Z",
+          "endsAt": "2026-09-27T15:30:00.000Z",
           "timezone": "Asia/Calcutta",
-          "kind": "in-person",
-          "venueCity": "Namkum"
+          "kind": "virtual"
         },
         "iconUrl": "/group-icons/ranchi.svg",
         "iconSourceUrl": "https://ocgroups.dev/images/4f433abc1d265b87a2f1a080ab0164fa57b03eabd9d6653bf0a2c53f7f941ea0.svg",
