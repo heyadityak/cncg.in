@@ -946,14 +946,14 @@
         "description": "Cloud Native Gurugram is a CNCF chapter of experts, developers, and tech enthusiasts devoted to cloud-native technologies, providing the local tech community a forum to exchange best practices, insights, and information about cloud-native technology.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/atcn6qw",
         "latestEvent": {
-          "name": "Cloud Native AI Night: Pre-KCD Gujarat Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/atcn6qw/event/t8kajsc",
-          "startsAt": "2026-09-18T12:30:00.000Z",
-          "syncedAt": "2026-09-09T10:51:07.998Z",
-          "endsAt": "2026-09-18T15:30:00.000Z",
+          "name": "Kube8s AI Connect: The Build Day",
+          "eventUrl": "https://ocgroups.dev/cncf/group/atcn6qw/event/shmatck",
+          "startsAt": "2026-10-10T04:00:00.000Z",
+          "syncedAt": "2026-09-25T11:17:05.428Z",
+          "endsAt": "2026-10-10T09:30:00.000Z",
           "timezone": "Asia/Calcutta",
           "kind": "in-person",
-          "venueCity": "Ahmedabad"
+          "venueCity": "Gurugram"
         },
         "iconUrl": "/group-icons/gurugram.png",
         "iconSourceUrl": "https://ocgroups.dev/images/9fa7e67cc4a4b997e19a7a5e06aec20993b12d494497886f2a856e926d658186.png",
