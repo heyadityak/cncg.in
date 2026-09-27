@@ -811,13 +811,14 @@
         "description": "Cloud Native Computing Group Noida serves the booming NCR tech corridor, hosting sessions on cloud-native security, Kubernetes operations, and platform engineering.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/u7abdpk",
         "latestEvent": {
-          "name": "AI in Observability",
-          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/vh2etr4",
-          "startsAt": "2026-09-26T04:00:00.000Z",
-          "syncedAt": "2026-09-04T11:59:42.227Z",
-          "endsAt": "2026-09-26T08:00:00.000Z",
+          "name": "Platform Engineering: Building Scalable, Secure & Developer-Friendly Platforms",
+          "eventUrl": "https://ocgroups.dev/cncf/group/u7abdpk/event/daw39mf",
+          "startsAt": "2026-11-21T04:30:00.000Z",
+          "syncedAt": "2026-09-27T03:55:33.668Z",
+          "endsAt": "2026-11-21T08:30:00.000Z",
           "timezone": "Asia/Kolkata",
-          "kind": "in-person"
+          "kind": "in-person",
+          "venueCity": "Noida"
         },
         "iconUrl": "/group-icons/noida.png",
         "iconSourceUrl": "https://ocgroups.dev/images/6e7b6887c9015acec51386d9322ccbc46809995553339d86da74bd90bff16b1c.png"
