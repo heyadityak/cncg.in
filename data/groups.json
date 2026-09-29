@@ -467,11 +467,11 @@
         "description": "Cloud Native Computing Group Chennai is the gateway to cloud-native technologies in South India, hosting talks on Kubernetes, cloud cost optimisation, and CNCF project deep-dives.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/96ne96f",
         "latestEvent": {
-          "name": "Cloud Native Chennai - July 2026 Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/96ne96f/event/kdh466v",
-          "startsAt": "2026-07-25T04:00:00.000Z",
-          "syncedAt": "2026-07-11T13:19:15.030Z",
-          "endsAt": "2026-07-25T07:00:00.000Z",
+          "name": "Cloud Native Chennai - October 2026 Meetup",
+          "eventUrl": "https://ocgroups.dev/cncf/group/96ne96f/event/pre83n8",
+          "startsAt": "2026-10-10T08:30:00.000Z",
+          "syncedAt": "2026-09-29T21:57:20.762Z",
+          "endsAt": "2026-10-10T11:00:00.000Z",
           "timezone": "Asia/Kolkata",
           "kind": "in-person",
           "venueCity": "Chennai"
