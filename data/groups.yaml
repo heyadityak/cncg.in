@@ -401,9 +401,9 @@
       latestEvent:
         name: "Cloud Native Chennai - October 2026 Meetup"
         eventUrl: "https://ocgroups.dev/cncf/group/96ne96f/event/pre83n8"
-        startsAt: "2026-10-10T08:30:00.000Z"
-        syncedAt: "2026-09-29T21:57:20.762Z"
-        endsAt: "2026-10-10T11:00:00.000Z"
+        startsAt: "2026-10-10T08:00:00.000Z"
+        syncedAt: "2026-10-05T04:18:49.160Z"
+        endsAt: "2026-10-10T12:15:00.000Z"
         timezone: "Asia/Kolkata"
         kind: "in-person"
         venueCity: "Chennai"
