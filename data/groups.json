@@ -36,13 +36,14 @@
         "description": "Cloud Native Computing Group Mysuru brings cloud-native technology to the Palace City, connecting developers and enthusiasts around Kubernetes, observability, and open-source tools.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/czbercj",
         "latestEvent": {
-          "name": "September Monthly Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/czbercj/event/k62437s",
-          "startsAt": "2026-09-12T12:30:00.000Z",
-          "syncedAt": "2026-09-05T14:41:29.881Z",
-          "endsAt": "2026-09-12T13:30:00.000Z",
-          "timezone": "Asia/Calcutta",
-          "kind": "virtual"
+          "name": "Cloud Native Mysuru: Inaugural Meetup at VVCE",
+          "eventUrl": "https://ocgroups.dev/cncf/group/czbercj/event/w8fmvum",
+          "startsAt": "2026-10-24T05:30:00.000Z",
+          "syncedAt": "2026-10-08T22:58:55.140Z",
+          "endsAt": "2026-10-24T08:30:00.000Z",
+          "timezone": "Asia/Kolkata",
+          "kind": "in-person",
+          "venueCity": "Mysuru"
         },
         "iconUrl": "/group-icons/mysore.jpg",
         "iconSourceUrl": "https://ocgroups.dev/images/48dc2f02040d7ddfaf6d224661c04e79d61d1344beb89f3e6582a96521a00413.jpg",
