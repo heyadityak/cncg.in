@@ -58,6 +58,6 @@
     "mapshaper": "^0.7.16",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "wrangler": "^4.103.0"
+    "wrangler": "^4.145.0"
   }
 }
