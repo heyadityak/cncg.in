@@ -632,14 +632,13 @@
         "description": "Cloud Native Computing Group Kochi drives cloud-native learning in Kerala, with a strong focus on Kubernetes, serverless, and open-source contributions from the developer community.",
         "ocGroupUrl": "https://ocgroups.dev/cncf/group/h47f5ed",
         "latestEvent": {
-          "name": "CNCG Kochi September Offline Meetup",
-          "eventUrl": "https://ocgroups.dev/cncf/group/h47f5ed/event/zt98e7z",
-          "startsAt": "2026-09-12T04:00:00.000Z",
-          "syncedAt": "2026-09-04T11:59:41.619Z",
-          "endsAt": "2026-09-12T07:30:00.000Z",
+          "name": "CNCG Kochi: AI Connect",
+          "eventUrl": "https://ocgroups.dev/cncf/group/h47f5ed/event/3cznkyc",
+          "startsAt": "2026-10-31T04:00:00.000Z",
+          "syncedAt": "2026-10-12T11:05:36.828Z",
+          "endsAt": "2026-10-31T08:30:00.000Z",
           "timezone": "Asia/Calcutta",
-          "kind": "in-person",
-          "venueCity": "Kakkanad"
+          "kind": "in-person"
         },
         "iconUrl": "/group-icons/kochi.png",
         "iconSourceUrl": "https://ocgroups.dev/images/86675f053d914e3add2d354dcb656afad3741a7b84c8941fcc9dea3dbf66974e.png",
