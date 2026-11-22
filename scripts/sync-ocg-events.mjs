@@ -79,35 +79,58 @@ function mapEvent(event) {
   return mapped;
 }
 
+function isoDate(ms) {
+  return new Date(ms).toISOString().slice(0, 10);
+}
+
+/**
+ * Group event search now 422s unless view_mode is calendar or map, and a
+ * group filter returns nothing unless date_from/date_to are set. sort and
+ * limit are ignored: pages are oldest-first and stop at 1000 (truncated).
+ */
+async function listGroupEvents(groupSlug, dateFrom, dateTo) {
+  const collected = [];
+  let from = dateFrom;
+
+  for (let page = 0; page < 8; page++) {
+    const result = await searchEvents({
+      community: ["cncf"],
+      group: [groupSlug],
+      view_mode: "calendar",
+      date_from: from,
+      date_to: dateTo,
+      sort_by: "date",
+      sort_direction: "asc",
+    });
+    const events = result.events ?? [];
+    collected.push(...events);
+
+    if (!result.truncated || events.length === 0) break;
+
+    const newest = Math.max(...events.map((event) => event.starts_at ?? 0));
+    const nextFrom = isoDate(newest * 1000 + 86_400_000);
+    if (!newest || nextFrom <= from || nextFrom > dateTo) break;
+    from = nextFrom;
+  }
+
+  return collected;
+}
+
 async function fetchLatestEvent(groupSlug) {
-  const upcoming = await searchEvents({
-    community: ["cncf"],
-    group: [groupSlug],
-    limit: 1,
-    sort_by: "date",
-    sort_direction: "asc",
-  });
+  const now = Date.now();
+  const today = isoDate(now);
 
-  if (upcoming.events?.length) {
-    return mapEvent(upcoming.events[0]);
-  }
+  const upcoming = await listGroupEvents(groupSlug, today, "2035-12-31");
+  const next = upcoming
+    .filter((event) => typeof event.starts_at === "number" && event.starts_at * 1000 >= now)
+    .sort((a, b) => a.starts_at - b.starts_at)[0];
+  if (next) return mapEvent(next);
 
-  const today = new Date().toISOString().slice(0, 10);
-  const past = await searchEvents({
-    community: ["cncf"],
-    group: [groupSlug],
-    date_from: "2020-01-01",
-    date_to: today,
-    limit: 1,
-    sort_by: "date",
-    sort_direction: "desc",
-  });
-
-  if (past.events?.length) {
-    return mapEvent(past.events[0]);
-  }
-
-  return null;
+  const past = await listGroupEvents(groupSlug, "2020-01-01", today);
+  const previous = past
+    .filter((event) => typeof event.starts_at === "number" && event.starts_at * 1000 < now)
+    .sort((a, b) => b.starts_at - a.starts_at)[0];
+  return previous ? mapEvent(previous) : null;
 }
 
 async function fetchRemoteIconUrl(groupSlug) {

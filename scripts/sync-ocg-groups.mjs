@@ -170,6 +170,21 @@ function resolveStateFeature(point, features) {
   return { feature: nearestStateFeature(point, features), exact: false };
 }
 
+/**
+ * Groups search no longer returns country_code/country_name. Count a group as
+ * India only when its point is inside a state polygon. A nearest-state match
+ * would also pull in chapters in Pakistan, Nepal, and Bangladesh.
+ */
+function isInIndia(group, features) {
+  if (typeof group.latitude !== "number" || typeof group.longitude !== "number") {
+    return false;
+  }
+  const point = [group.longitude, group.latitude];
+  return features.some((feature) =>
+    feature.polygons.some((rings) => pointInPolygon(point, rings))
+  );
+}
+
 function featureCentre(feature) {
   let minLng = Infinity;
   let minLat = Infinity;
@@ -252,9 +267,8 @@ console.log(
 );
 
 const upstream = await fetchAllCncfGroups();
-const indiaGroups = upstream.filter(
-  (group) => group.country_code === "IN" || group.country_name === "India"
-);
+const stateFeatures = loadStateFeatures();
+const indiaGroups = upstream.filter((group) => isInIndia(group, stateFeatures));
 const activeIndiaGroups = indiaGroups.filter((group) => group.active !== false);
 
 console.log(
@@ -303,8 +317,6 @@ for (const state of [...groups]) {
 }
 
 // ── Additions ───────────────────────────────────────────────────────────────
-
-const stateFeatures = loadStateFeatures();
 
 for (const group of activeIndiaGroups) {
   if (localOcgSlugs.has(group.slug)) continue;
