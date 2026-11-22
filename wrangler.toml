@@ -25,6 +25,10 @@ binding = "ASSETS"
 # Run the Worker before static assets so middleware can inspect Host and
 # rewrite subdomain requests (e.g. karnataka.cncg.in → /state/karnataka).
 run_worker_first = true
+# Required by @opennextjs/cloudflare when run_worker_first is set. Next serves
+# public files only at their exact path; other html_handling values can bypass middleware.
+html_handling = "none"
+not_found_handling = "none"
 
 [[services]]
 binding = "WORKER_SELF_REFERENCE"
