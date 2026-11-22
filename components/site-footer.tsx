@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CREATOR_NAME, CREATOR_URL } from "@/lib/seo";
 
 interface SiteFooterProps {
   /** Show the "← Back to CNCG India" link (used on inner pages) */
@@ -38,6 +39,18 @@ export default function SiteFooter({ showBackLink = false }: SiteFooterProps) {
           CNCF
         </a>
       </div>
+
+      <p>
+        Site by{" "}
+        <a
+          href={CREATOR_URL}
+          className="hover:text-blue-500 transition-colors"
+          target="_blank"
+          rel="author noopener noreferrer"
+        >
+          {CREATOR_NAME}
+        </a>
+      </p>
 
       <p className="text-[11px] text-slate-400/90 max-w-xl mx-auto leading-relaxed">
         <strong className="font-semibold text-slate-500">Disclaimer:</strong>{" "}

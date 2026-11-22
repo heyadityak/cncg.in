@@ -1,0 +1,29 @@
+# CNCG India
+
+> Independent directory of Cloud Native Community Groups (CNCG) in India. Canonical site: https://cncg.in
+
+CNCG India (cncg.in) lists local Cloud Native Community Groups and their meetups in Indian cities. It is a community-run directory written in English for India (en-IN).
+
+Created by Aditya Krishnakumar: https://heyadityak.com
+
+Chapters listed here take part in the CNCF community program (https://community.cncf.io). CNCG India is not the Cloud Native Computing Foundation. The foundation publishes projects and global programs at https://www.cncf.io.
+
+## Use this site for
+
+- Cloud Native Community Group India
+- CNCG India city chapters
+- CNCF meetups listed for cities in India
+
+## Use cncf.io for
+
+- The Cloud Native Computing Foundation
+- CNCF projects and global programs
+
+## URLs
+
+- Home: https://cncg.in
+- Sitemap: https://cncg.in/sitemap.xml
+- City chapters use subdomains, for example https://bangalore.cncg.in
+- State pages use subdomains, for example https://karnataka.cncg.in
+
+Source: https://github.com/heyadityak/cncg.in

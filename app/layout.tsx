@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import JsonLd from "@/components/json-ld";
-import { organizationJsonLd, SITE_URL, websiteJsonLd } from "@/lib/seo";
+import {
+  CREATOR_NAME,
+  CREATOR_URL,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  indexableRobots,
+  organizationJsonLd,
+  SITE_NAME,
+  SITE_URL,
+  websiteJsonLd,
+} from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,44 +27,35 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CNCG India — Cloud Native Community Groups & CNCF Chapters",
+    default: HOME_TITLE,
     template: "%s | CNCG India",
   },
-  description:
-    "Find every listed CNCF and Cloud Native Community Group (CNCG) across India. Discover local Kubernetes meetups, cloud-native events, and community chapters.",
+  description: HOME_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: CREATOR_NAME, url: CREATOR_URL }],
+  creator: CREATOR_NAME,
+  publisher: SITE_NAME,
   keywords: [
-    "CNCF",
-    "CNCG",
-    "Cloud Native",
+    "CNCG India",
+    "Cloud Native Community Group India",
+    "CNCF meetup India",
     "Cloud Native Community Groups",
-    "Kubernetes",
-    "CNCF India",
-    "Cloud Native India",
-    "community",
+    "CNCF chapters India",
   ],
   openGraph: {
-    title: "CNCG India — Cloud Native Community Groups & CNCF Chapters",
-    description:
-      "Find CNCF and Cloud Native Community Groups across India. Meetups, events, and local chapters near you.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     url: SITE_URL,
-    siteName: "CNCG India",
+    siteName: SITE_NAME,
     locale: "en_IN",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "CNCG India — Cloud Native Community Groups & CNCF Chapters",
-    description:
-      "Find CNCF and Cloud Native Community Groups across India. Meetups, events, and local chapters near you.",
+    card: "summary",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+  robots: indexableRobots,
 };
 
 export default function RootLayout({
@@ -63,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background`}
       >

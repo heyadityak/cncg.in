@@ -5,18 +5,52 @@ import { groups } from "@/data/groups";
 import IndiaMapClient from "@/components/india-map-client";
 import NearestGroup from "@/components/nearest-group";
 import SiteFooter from "@/components/site-footer";
-import { cityCanonical, SITE_URL, stateCanonical } from "@/lib/seo";
+import JsonLd from "@/components/json-ld";
+import {
+  cityCanonical,
+  CNCF_COMMUNITY_URL,
+  CNCF_URL,
+  HOME_DESCRIPTION,
+  HOME_FAQS,
+  HOME_TITLE,
+  homeJsonLd,
+  pageAlternates,
+  SITE_NAME,
+  SITE_URL,
+  stateCanonical,
+} from "@/lib/seo";
 
 const totalGroups = groups.reduce((sum, s) => sum + s.cities.length, 0);
 const totalStates = groups.length;
 
 export const metadata: Metadata = {
-  alternates: { canonical: SITE_URL },
+  title: { absolute: HOME_TITLE },
+  description: HOME_DESCRIPTION,
+  alternates: {
+    ...pageAlternates(SITE_URL),
+    types: {
+      "text/plain": `${SITE_URL}/llms.txt`,
+    },
+  },
+  openGraph: {
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+  },
 };
 
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-blue-50">
+      <JsonLd data={homeJsonLd()} />
       {/* Header */}
       <header className="px-6 py-4 flex items-center justify-between border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-20">
         <div className="flex items-center gap-3">
@@ -53,12 +87,12 @@ export default function HomePage() {
       {/* Hero + Stats */}
       <div className="px-6 py-8 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">
-          Find Your Cloud Native Community
+          Cloud Native Community Groups in India
         </h1>
         <p className="text-slate-600 max-w-xl mx-auto mb-6">
-          Discover every CNCF and Cloud Native Community Group (CNCG) in our
-          directory across India. Click a highlighted state to explore its local
-          Kubernetes and cloud-native chapters.
+          CNCG India lists {totalGroups} Cloud Native Community Groups across{" "}
+          {totalStates} states. Open a state to find a city chapter and its
+          CNCF meetups.
         </p>
         <div className="flex items-center justify-center gap-6">
           <div className="flex items-center gap-1.5 text-sm text-slate-700">
@@ -173,19 +207,72 @@ export default function HomePage() {
                           ? `/city/${city.slug}`
                           : cityCanonical(city.slug)
                       }
-                      title={`CNCF ${city.name} — Cloud Native ${city.name}`}
                       className="text-blue-700 hover:text-blue-900 hover:underline"
                     >
                       CNCF {city.name}
-                      <span className="sr-only">
-                        {" "}
-                        — Cloud Native {city.name} — CNCG {city.name}
-                      </span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </section>
+          ))}
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="about-cncg-india"
+        className="px-6 pb-10 max-w-3xl mx-auto w-full"
+      >
+        <h2
+          id="about-cncg-india"
+          className="text-lg font-semibold text-slate-900 text-center mb-2"
+        >
+          What CNCG India is
+        </h2>
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600 leading-relaxed space-y-3">
+          <p>
+            <strong className="font-semibold text-slate-800">CNCG India</strong>{" "}
+            (cncg.in) is an independent directory of Cloud Native Community
+            Groups in India. It lists city chapters, who organises them, and
+            the latest meetup on record.
+          </p>
+          <p>
+            Those chapters take part in the{" "}
+            <a
+              href={CNCF_COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:underline"
+            >
+              CNCF community program
+            </a>
+            . The Cloud Native Computing Foundation publishes projects and
+            global programs at{" "}
+            <a
+              href={CNCF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:underline"
+            >
+              cncf.io
+            </a>
+            . Use cncf.io for the foundation. Use cncg.in to find a chapter or
+            meetup in India.
+          </p>
+        </div>
+        <div className="mt-4 space-y-3">
+          {HOME_FAQS.map((faq) => (
+            <div
+              key={faq.question}
+              className="rounded-xl border border-slate-200 bg-white p-4"
+            >
+              <h3 className="font-semibold text-slate-900 text-sm">
+                {faq.question}
+              </h3>
+              <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
           ))}
         </div>
       </section>

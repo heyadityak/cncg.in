@@ -11,6 +11,10 @@ import JsonLd from "@/components/json-ld";
 import { isEventUpcoming } from "@/lib/event-utils";
 import {
   cityCanonical,
+  CNCF_URL,
+  indexableRobots,
+  pageAlternates,
+  SITE_NAME,
   stateCanonical,
   stateDescription,
   stateJsonLd,
@@ -39,12 +43,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description,
     keywords: stateKeywords(stateData),
-    alternates: { canonical },
+    alternates: pageAlternates(canonical),
     openGraph: {
       title,
       description,
       url: canonical,
-      siteName: "CNCG India",
+      siteName: SITE_NAME,
       locale: "en_IN",
       type: "website",
     },
@@ -53,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
     },
-    robots: { index: true, follow: true },
+    robots: indexableRobots,
   };
 }
 
@@ -91,8 +95,18 @@ export default async function StatePage({ params }: Props) {
             CNCF {stateData.name}
           </h1>
           <p className="text-slate-600">
-            Cloud Native Community Groups (CNCG) in {stateData.name} — local
-            CNCF chapters for Kubernetes meetups and cloud-native learning.
+            Cloud Native Community Groups (CNCG) in {stateData.name}, India.
+            These are local CNCF community chapters for Kubernetes meetups.
+            CNCG India lists them here; foundation programs stay on{" "}
+            <a
+              href={CNCF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 hover:underline"
+            >
+              cncf.io
+            </a>
+            .
           </p>
           <div className="flex items-center gap-4 mt-3">
             <div className="flex items-center gap-1.5 text-sm text-slate-600">

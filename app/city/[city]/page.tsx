@@ -13,9 +13,13 @@ import {
   absoluteAssetUrl,
   cityCanonical,
   cityDescription,
+  cityFaqs,
   cityJsonLd,
   cityKeywords,
   cityTitle,
+  indexableRobots,
+  pageAlternates,
+  SITE_NAME,
   stateCanonical,
 } from "@/lib/seo";
 
@@ -47,12 +51,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description,
     keywords,
-    alternates: { canonical },
+    alternates: pageAlternates(canonical),
     openGraph: {
       title,
       description,
       url: canonical,
-      siteName: "CNCG India",
+      siteName: SITE_NAME,
       locale: "en_IN",
       type: "website",
       ...(ogImage ? { images: [{ url: ogImage, alt: `CNCF ${city.name}` }] } : {}),
@@ -63,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       ...(ogImage ? { images: [ogImage] } : {}),
     },
-    robots: { index: true, follow: true },
+    robots: indexableRobots,
   };
 }
 
@@ -75,6 +79,7 @@ export default async function CityPage({ params }: Props) {
 
   const { city, state } = result;
   const siblings = state.cities.filter((c) => c.slug !== city.slug);
+  const faqs = cityFaqs(city, state);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -213,38 +218,19 @@ export default async function CityPage({ params }: Props) {
             Frequently asked questions
           </h2>
           <div className="space-y-4">
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <h3 className="font-semibold text-slate-900 text-sm">
-                What is CNCF {city.name}?
-              </h3>
-              <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">
-                CNCF {city.name} (also called CNCG {city.name} or Cloud Native{" "}
-                {city.name}) is the local Cloud Native Community Group serving{" "}
-                {city.name} and nearby areas in {state.name}. The community runs
-                meetups and workshops on Kubernetes and the broader CNCF
-                ecosystem.
-              </p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <h3 className="font-semibold text-slate-900 text-sm">
-                How do I join Cloud Native {city.name}?
-              </h3>
-              <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">
-                Use the links above to join the group, follow social channels, or
-                submit a talk via the CFP form when available. Newcomers and
-                experienced practitioners are welcome at CNCG {city.name} events.
-              </p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <h3 className="font-semibold text-slate-900 text-sm">
-                Is CNCG {city.name} the same as CNCF {city.name}?
-              </h3>
-              <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">
-                Yes. CNCG stands for Cloud Native Community Group. Searches for
-                CNCF {city.name}, Cloud Native {city.name}, and CNCG {city.name}{" "}
-                all refer to this same local chapter.
-              </p>
-            </div>
+            {faqs.map((faq) => (
+              <div
+                key={faq.question}
+                className="rounded-xl border border-slate-200 bg-white p-4"
+              >
+                <h3 className="font-semibold text-slate-900 text-sm">
+                  {faq.question}
+                </h3>
+                <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
