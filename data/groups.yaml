@@ -804,13 +804,10 @@
       lng: 75.8077
       ocGroupUrl: "https://ocgroups.dev/cncf/group/cq2hzpj"
       latestEvent:
-        name: "Cloud Native Indore -  November 2024 - Meetup"
-        eventUrl: "https://ocgroups.dev/cncf/group/cq2hzpj/event/z82nhgy"
-        startsAt: "2024-11-23T05:30:00.000Z"
-        syncedAt: "2026-09-21T09:08:04.827Z"
-        endsAt: "2024-11-23T07:00:00.000Z"
-        timezone: "Asia/Kolkata"
-        kind: "in-person"
-        venueCity: "Indore"
+        name: "Cloud Native Indore - Dec 2026 - Meetup"
+        eventUrl: "https://ocgroups.dev/cncf/group/cq2hzpj/event/f7f6stn"
+        startsAt: "2026-12-05T11:30:00.000Z"
+        syncedAt: "2026-11-25T16:51:14.047Z"
+        endsAt: "2026-12-05T13:30:00.000Z"
       iconUrl: "/group-icons/indore.png"
       iconSourceUrl: "https://ocgroups.dev/images/5434e1f6bfbdbd0b482644f33674fdeb2c8c483f7e025ce21e414fa71e65fe12.png"
